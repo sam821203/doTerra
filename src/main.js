@@ -5,4 +5,4 @@ const app = createApp(App);
 
 // app.component('favorites-section', FavoritesSection);
 
-app.mount('#app')
+app.mount('#app');

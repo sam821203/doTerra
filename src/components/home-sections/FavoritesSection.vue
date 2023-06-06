@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  setup() { 
+  setup() {
     const products = [
       {
         name: "Smartsassy",
@@ -56,7 +56,7 @@ export default {
       products
     };
   },
-}
+};
 </script>
 
 <style></style>

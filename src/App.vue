@@ -9,11 +9,11 @@ export default {
   components: {
     HomePage
   }
-}
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap';
 
 :root {
   /* 品牌主色 */
@@ -49,14 +49,14 @@ export default {
   --green-100: #E7F8EC;
 
   /* 無彩色 */
-  --gray-900: #000000;
+  --gray-900: #000;
   --gray-400: #D1D1D1;
-  --gray-300: #EEEEEE;
+  --gray-300: #EEE;
   --gray-200: #F9F9F9;
-  --gray-100: #FFFFFF;
+  --gray-100: #FFF;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
   License: none (public domain)
 */
@@ -69,46 +69,47 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  border: 0;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
   font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
+  color: var(--secondary-400);
 }
 
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: '';
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .d-flex {
@@ -164,6 +165,15 @@ img {
   height: auto;
   border: 0;
   vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:visited {
+  color: var(--secondary-400);
 }
 
 .layout--main {

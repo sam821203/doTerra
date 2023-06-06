@@ -18,6 +18,6 @@ export default {
     PromoSection,
     FavoritesSection,
   },
-  
+
 };
 </script>
