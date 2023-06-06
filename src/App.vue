@@ -13,6 +13,49 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+  /* 品牌主色 */
+  --primary-400: #A94FB7;
+  --primary-300: #AE56BA;
+  --primary-200: #C688CE;
+  --primary-100: #F7EEF8;
+
+  /* 品牌輔助色 */
+  --secondary-400: #314659;
+  --secondary-300: #6C7A87;
+  --secondary-200: #82909C;
+  --secondary-100: #C0C7CE;
+
+  /* 警示色系-產品內高度提醒的相關顏色，也用於價格與優惠顯示上 */
+  --warning-500: #A70012;
+  --warning-400: #D4949B;
+  --warning-300: #CDA1A1;
+  --warning-200: #EDC3B7;
+  --warning-100: #F8EBE6;
+
+  /* 藍色-主要用於連結 */
+  --blue-400: #1964E4;
+  --blue-300: #4397E8;
+  --blue-200: #8CC0F6;
+  --blue-100: #F3F8FE;
+
+  /* 綠色-主要用於成功狀態，或是綠色需要 */
+  --green-500: #009D00;
+  --green-400: #0AAE40;
+  --green-300: #4FB974;
+  --green-200: #90C4A0;
+  --green-100: #E7F8EC;
+
+  /* 無彩色 */
+  --gray-900: #000000;
+  --gray-400: #D1D1D1;
+  --gray-300: #EEEEEE;
+  --gray-200: #F9F9F9;
+  --gray-100: #FFFFFF;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain)
@@ -46,6 +89,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ol, ul {
