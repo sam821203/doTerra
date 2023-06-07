@@ -7,7 +7,7 @@
   <header>
     <div class="header__wrap layout--main">
       <div class="header__left">
-        <img src="./logo.svg" alt="">
+        <img src="../../images/logo.svg" alt="">
       </div>
       <ul class="header__center">
         <li>
@@ -21,9 +21,32 @@
         </li>
         <li>
           <input type="text" placeholder="Search...">
+          <button>
+            <img src="../../images/search.svg" alt="">
+          </button>
         </li>
       </ul>
       <div class="header__right">
+        <div>
+          <a href="">
+            <img src="../../images/help.svg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="../../images/account.svg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="../../images/like.svg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="../../images/cart.svg" alt="">
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -33,11 +56,16 @@
 
 </script>
 
-<style>
+<style scoped>
   header {
     width: 100%;
     height: 104px;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: var(--box-shadow-1);
+  }
+
+  p {
+    color: var(--gray-100);
+    line-height: unset;
   }
 
   .header__wrap {
@@ -72,10 +100,41 @@
   }
 
   .header__center {
+    display: flex;
+    align-items: center;
     width: 70%;
   }
 
+  .header__center li:last-child {
+    position: relative;
+  }
+
+  .header__center li:last-child button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .header__center li:last-child input {
+    padding-left: 16px;
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow-1);
+  }
+
+  .header__center li:last-child input:focus {
+    border: none;
+  }
+
+  .header__center li:last-child input::placeholder {
+    color: var(--gray-400);
+  }
+
   .header__right {
+    display: flex;
     width: 16%;
   }
 </style>

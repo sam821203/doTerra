@@ -1,28 +1,36 @@
 <template>
   <section class="hero">
+    <!-- fix here -->
     <swiper
-      :space-between="30"
+      :space-between="80"
       :centered-slides="true"
       :pagination="{
         clickable: true,
       }"
       :navigation="true"
       :modules="modules"
+      :slides-per-view="1.75"
+      :slides-per-group="1"
+      :initial-slide="1"
+      :loop="true"
+      :looped-slides="1.75"
+      :watch-slides-progress="true"
+      :watch-slides-visibility="true"
       class="mySwiper"
     >
       <swiper-slide>
         <a href="">
-          <img src="https://source.unsplash.com/random/1160x488/?wallpaper" alt="">
+          <img src="../../images/slider-1.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="">
-          <img src="https://source.unsplash.com/random/1160x488/?wallpaper" alt="">
+          <img src="../../images/slider-2.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="">
-          <img src="https://source.unsplash.com/random/1160x488/?wallpaper" alt="">
+          <img src="../../images/slider-3.jpg" alt="">
         </a>
       </swiper-slide>
     </swiper>
@@ -51,6 +59,10 @@ export default {
 </script>
 
 <style>
+  .hero {
+    padding: 2% 0;
+  }
+
   .swiper {
     width: 100%;
     height: 100%;
@@ -60,6 +72,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* width: auto !important; */
     font-size: 18px;
     text-align: center;
     background: #fff;

@@ -29,11 +29,11 @@ export default {
   --secondary-100: #C0C7CE;
 
   /* 警示色系-產品內高度提醒的相關顏色，也用於價格與優惠顯示上 */
-  --warning-500: #A70012;
-  --warning-400: #D4949B;
-  --warning-300: #CDA1A1;
-  --warning-200: #EDC3B7;
-  --warning-100: #F8EBE6;
+  --red-500: #A70012;
+  --red-400: #D4949B;
+  --red-300: #CDA1A1;
+  --red-200: #EDC3B7;
+  --red-100: #F8EBE6;
 
   /* 藍色-主要用於連結 */
   --blue-400: #1964E4;
@@ -54,6 +54,18 @@ export default {
   --gray-300: #EEE;
   --gray-200: #F9F9F9;
   --gray-100: #FFF;
+
+  /* box-shadow */
+  --box-shadow-1: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+
+  /* border-radius */
+  --border-radius-md: 6px;
+  --border-radius-sm: 2px;
+  --border-radius-rounded-btn: 50px;
+
+  /* font-size */
+  --header-1: 30px;
+  --header-2: 18px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -112,6 +124,39 @@ table {
   border-spacing: 0;
 }
 
+p {
+  font-size: 14px;
+  color: var(--secondary-300);
+  line-height: 150%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    outline: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:visited {
+  color: var(--secondary-400);
+}
+
 .d-flex {
   display: flex;
 }
@@ -156,29 +201,28 @@ table {
   margin-bottom: 4%;
 }
 
+.m-bottom--md {
+  margin-bottom: 8%;
+}
+
 .m-bottom--xl {
   margin-bottom: 10%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border: 0;
-  vertical-align: middle;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:active,
-a:visited {
-  color: var(--secondary-400);
 }
 
 .layout--main {
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
+}
+
+.btn-cta {
+  width: 136px;
+  height: 40px;
+  text-align: center;
+  color: var(--gray-100);
+  background-color: var(--primary-300);
+  border-radius: var(--border-radius-rounded-btn);
+  font-weight: 700;
+  box-shadow: var(--box-shadow-1);
 }
 </style>
