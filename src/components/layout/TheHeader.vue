@@ -21,9 +21,9 @@
         </li>
         <li>
           <input type="text" placeholder="Search...">
-          <button>
+          <base-button mode="btn-search">
             <img src="../../images/search.svg" alt="">
-          </button>
+          </base-button>
         </li>
       </ul>
       <div class="header__right">
@@ -96,24 +96,24 @@
   }
 
   .header__left {
-    width: 14%;
+    width: 13%;
   }
 
   .header__center {
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 68%;
+  }
+
+  .header__center li {
+    margin-right: 32px;
+    word-break: keep-all;
   }
 
   .header__center li:last-child {
     position: relative;
-  }
-
-  .header__center li:last-child button {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    margin-right: 0;
+    width: 68%;
   }
 
   .header__center li:last-child input {
@@ -135,6 +135,7 @@
 
   .header__right {
     display: flex;
-    width: 16%;
+    justify-content: end;
+    width: 19%;
   }
 </style>

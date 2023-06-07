@@ -6,10 +6,10 @@
         <div>
           <h2 class="m-bottom--sm">Scents of the Season</h2>
           <p class="m-bottom--md">For life's fast-paced moments, from a busy work day to festive activities, try using Wild Orange during periods of low energy for a quick boost.</p>
-          <button class="btn-cta">Add to Cart</button>
+          <base-button mode="btn-cta">Add to Cart</base-button>
         </div>
       </div>
-      <div class="promo__left--product product">
+      <div class="promo__left--product">
         <div class="product__info">
           <div class="product__text">
             <div class="product__text--capacity">10ml</div>
@@ -18,12 +18,16 @@
           </div>
           <div class="product__price">
             <div class="product__price--point"><span>11,00</span>PV</div>
-            <div class="product__price--discount">NT$<span>1,980</span><span>2,200</span></div>
+            <div class="product__price--discount">
+              NT$
+              <base-price-tag mode="discount">1,980</base-price-tag>
+              <base-price-tag mode="line-through">2,200</base-price-tag>
+            </div>
           </div>
         </div>
         <div class="product__img">
-          <img src="" alt="">
-          <img src="" alt="">
+          <img src="../../images/promo-decor.png" alt="">
+          <img src="../../images/promo-product.png" alt="">
         </div>
       </div>
     </div>
@@ -31,7 +35,7 @@
   </section>
 </template>
 
-<style  lang="scss" scoped>
+<style lang="scss" scoped>
 .promo {
   display: flex;
   justify-content: space-between;
@@ -63,15 +67,43 @@
   }
 
   .promo__left--product {
-    width: 44%
+    position: relative;
+    display: flex;
+    width: 44%;
+
+    .product__img {
+      width: 50%;
+
+      img {
+        position: absolute;
+
+        &:first-child {
+          top: 16%;
+          right: 4%;
+          opacity: 0.4;
+        }
+
+        &:last-child {
+          top: -6%;
+          right: 22%;
+        }
+      }
+    }
   }
 
   .product__info {
     display: flex;
     justify-content: space-between;
     padding: 0 12px 0 4px;
+    width: 50%;
     height: 88%;
     flex-direction: column;
+  }
+
+  .product__text--desc {
+    line-height: 140%;
+    font-size: 12px;
+    color: var(--secondary-100);
   }
 
   .product__text--capacity {
@@ -89,11 +121,6 @@
   .product__text--name {
     margin-bottom: 8px;
     font-size: var(--header-2);
-  }
-
-  .product__text--desc {
-    font-size: 12px;
-    color: var(--secondary-100);
   }
 
   .product__price {
@@ -116,23 +143,6 @@
     .product__price--discount {
       margin-top: 12px;
       color: var(--red-500);
-
-      span {
-        font-size: 20px;
-        letter-spacing: 0.6px;
-
-        &:first-child {
-          font-weight: 700;
-          margin-left: 4px;
-          margin-right: 8px;
-        }
-
-        &:last-child {
-          font-size: 12px;
-          color: var(--secondary-200);
-          text-decoration-line: line-through;
-        }
-      }
     }
   }
 }

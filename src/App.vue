@@ -101,7 +101,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   color: var(--secondary-400);
 }
 
@@ -135,12 +135,6 @@ img {
   height: auto;
   border: 0;
   vertical-align: middle;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 input:focus,
@@ -215,14 +209,4 @@ a:visited {
   max-width: 1280px;
 }
 
-.btn-cta {
-  width: 136px;
-  height: 40px;
-  text-align: center;
-  color: var(--gray-100);
-  background-color: var(--primary-300);
-  border-radius: var(--border-radius-rounded-btn);
-  font-weight: 700;
-  box-shadow: var(--box-shadow-1);
-}
 </style>
