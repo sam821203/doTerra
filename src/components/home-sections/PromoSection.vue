@@ -35,6 +35,20 @@
   </section>
 </template>
 
+<script>
+// import { useStore } from 'vuex';
+
+export default {
+  setup() {
+    // const store = useStore();
+
+    // console.log(store);
+    return {
+    };
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 .promo {
   display: flex;
