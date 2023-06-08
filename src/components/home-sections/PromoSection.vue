@@ -17,11 +17,11 @@
             <div class="product__text--desc">ingredient・pepper・ipsum</div>
           </div>
           <div class="product__price">
-            <div class="product__price--point"><span>11,00</span>PV</div>
+            <base-point mode="outline">11,00</base-point>
             <div class="product__price--discount">
               NT$
-              <base-price-tag mode="discount">1,980</base-price-tag>
-              <base-price-tag mode="line-through">2,200</base-price-tag>
+              <base-price mode="discount">1,980</base-price>
+              <base-price mode="line-through">2,200</base-price>
             </div>
           </div>
         </div>
@@ -125,20 +125,6 @@
 
   .product__price {
     font-size: 14px;
-
-    .product__price--point {
-      padding: 2.6% 2.6% 2%;
-      width: fit-content;
-      color: var(--primary-300);
-      background-color: var(--gray-100);
-      border: 1px solid var(--primary-100);
-      border-radius: var(--border-radius-sm);
-
-      span {
-        font-weight: 700;
-        margin-right: 2px;
-      }
-    }
 
     .product__price--discount {
       margin-top: 12px;
