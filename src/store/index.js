@@ -16,10 +16,7 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [
-          { val: '20' },
-          { val: '100' },
-        ]
+        capacity: [20, 100]
       },
       {
         isDiscount: false,
@@ -33,9 +30,7 @@ const store = createStore({
         isFavorites: false,
         point: "8,00",
         selectCapacity: '',
-        capacity: [
-          { val: '10' },
-        ]
+        capacity: [10]
       },
       {
         isDiscount: false,
@@ -49,9 +44,7 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [
-          { val: '20' }
-        ]
+        capacity: [20]
       },
       {
         isDiscount: false,
@@ -65,11 +58,7 @@ const store = createStore({
         isFavorites: true,
         point: "12,50",
         selectCapacity: '',
-        capacity: [
-          { val: '450' },
-          { val: '100' },
-          { val: '200' },
-        ]
+        capacity: [450, 100, 200]
       },
       {
         isDiscount: false,
@@ -83,9 +72,7 @@ const store = createStore({
         isFavorites: true,
         point: "8,00",
         selectCapacity: '',
-        capacity: [
-          { val: '10' }
-        ]
+        capacity: [10]
       },
       {
         isDiscount: false,
@@ -99,10 +86,7 @@ const store = createStore({
         isFavorites: true,
         point: "12,50",
         selectCapacity: '',
-        capacity: [
-          { val: '20' },
-          { val: '200' },
-        ]
+        capacity: [20, 200]
       },
       {
         isDiscount: false,
@@ -116,10 +100,7 @@ const store = createStore({
         isFavorites: true,
         point: "12,50",
         selectCapacity: '',
-        capacity: [
-          { val: '20' },
-          { val: '150' },
-        ]
+        capacity: [20, 150]
       },
     ]
   },

@@ -18,19 +18,19 @@ export default {
 
 <style scoped>
 button {
+  text-align: center;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  font-weight: 700;
 }
 
-.btn-cta {
+.btn-round {
   width: 136px;
   height: 40px;
-  text-align: center;
   color: var(--gray-100);
   background-color: var(--primary-300);
   border-radius: var(--border-radius-rounded-btn);
-  font-weight: 700;
   box-shadow: var(--box-shadow-1);
 }
 
@@ -40,4 +40,15 @@ button {
   right: 0;
   transform: translateY(-50%);
 }
+
+.btn-square {
+  width: 136px;
+  height: 40px;
+  color: var(--gray-100);
+  background-color: var(--primary-300);
+  border: 1px solid var(--primary-300);
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+}
+
 </style>

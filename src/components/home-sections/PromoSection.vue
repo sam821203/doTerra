@@ -6,7 +6,7 @@
         <div>
           <h2 class="m-bottom--sm">Scents of the Season</h2>
           <p class="m-bottom--md">For life's fast-paced moments, from a busy work day to festive activities, try using Wild Orange during periods of low energy for a quick boost.</p>
-          <base-button mode="btn-cta">Add to Cart</base-button>
+          <base-button mode="btn-round">Add to Cart</base-button>
         </div>
       </div>
       <div class="promo__left--product">
