@@ -30,6 +30,7 @@ module.exports = {
     'scss/no-global-function-names': null,
     'scss/comment-no-empty': null,
     "order/properties-alphabetical-order": null,
+    "no-descending-specificity": null,
     "order/properties-order": [ // 設定自己的排序
       "position",
       "top",

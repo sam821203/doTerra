@@ -62,6 +62,7 @@ export default {
   --border-radius-md: 6px;
   --border-radius-sm: 2px;
   --border-radius-rounded-btn: 50px;
+  --border-radius-circle: 50%;
 
   /* font-size */
   --header-1: 30px;
@@ -103,6 +104,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.4px;
   color: var(--secondary-400);
+}
+
+h2 {
+  font-size: var(--header-1);
+}
+
+h3 {
+  font-size: var(--header-2);
 }
 
 ol, ul {
@@ -200,7 +209,7 @@ a:visited {
 }
 
 .m-bottom--xl {
-  margin-bottom: 10%;
+  margin-bottom: 32px;
 }
 
 .layout--main {
@@ -208,5 +217,4 @@ a:visited {
   margin-right: auto;
   max-width: 1280px;
 }
-
 </style>

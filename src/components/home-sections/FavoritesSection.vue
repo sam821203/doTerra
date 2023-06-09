@@ -1,60 +1,63 @@
 <template>
-  <section class="favorites">
+  <section class="favorites layout--main m-bottom--xl">
     <h2>My Favorites</h2>
-    <ul v-for="product in products" :key="product.name">
-      <li>
-        <a href="">
-          <div class="img-wrap">
-            <img :src="product.imgUrl" alt="">
-          </div>
-          <div>{{ product.name }}</div>
-        </a>
-      </li>
-    </ul>
+    <base-card mode="shadow-rounded">
+      <ul>
+        <li v-for="product in isFavoritesProduct" :key="product.title">
+          <a href="">
+            <div class="img-wrap">
+              <img :src="product.imageUrl" alt="">
+            </div>
+          </a>
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.ingredient }}</p>
+          <select v-model="product.selectCapacity">
+            <option v-for="option in product.capacity" :key="index">{{ proCapacity }}</option>
+          </select>
+        </li>
+      </ul>
+    </base-card>
   </section>
 </template>
 
 <script>
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+
 export default {
   setup() {
-    const products = [
-      {
-        name: "Smartsassy",
-        ingredient: "ingredient・pepper・ipsum",
-        originalPrice: 1800,
-        discount: 1500,
-        capacity: 450,
-        imgUrl: "https://media.etmall.com.tw/NXimg/003600/3600992/3600992-1_L.jpg"
-      },
-      {
-        name: "verage personalcare",
-        ingredient: "ingredient・pepper・ipsum",
-        originalPrice: 1860,
-        discount: null,
-        capacity: 50,
-        imgUrl: "https://media.etmall.com.tw/NXimg/003453/3453750/3453750-1_L.jpg"
-      },
-      {
-        name: "Smartsassy",
-        ingredient: "ingredient・pepper・ipsum",
-        originalPrice: 1800,
-        discount: 1500,
-        capacity: 450,
-        imgUrl: "https://media.etmall.com.tw/NXimg/002265/2265260/2265260-1_L.jpg"
-      },
-      {
-        name: "verage personalcare",
-        ingredient: "ingredient・pepper・ipsum",
-        originalPrice: 1860,
-        discount: null,
-        capacity: 50,
-        imgUrl: "https://media.etmall.com.tw/NXimg/004716/4716422/4716422-1_XXL.jpg"
-      },
-    ];
+    const store = useStore();
+    const products = store.getters.getProducts;
 
+    const isFavoritesProduct = computed(() => products.filter((pro) => pro.isFavorites === true));
+
+    const handleCapacity = computed(() => products.map((pro) => (Array.isArray(pro.capacity) ? pro.capacity.join(', ') : pro.capacity)));
+
+    // const handleCapacity = computed(() => products.map((pro) => {
+    //   console.log(pro.capacity);
+    //   return pro.capacity;
+    // }));
+
+    // products.forEach((product) => {
+    //   console.log(product);
+    // });
+    // console.log(products);
     return {
-      products
+      products,
+      isFavoritesProduct: isFavoritesProduct.value,
+      handleCapacity: handleCapacity.value
     };
   },
 };
 </script>
+
+<style scoped>
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  background-color: var(--gray-100);
+}
+</style>

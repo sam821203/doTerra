@@ -7,6 +7,7 @@ import BaseButton from './components/UI/BaseButton.vue';
 import BasePrice from './components/UI/BasePrice.vue';
 import BasePoint from './components/UI/BasePoint.vue';
 import BaseLike from './components/UI/BaseLike.vue';
+import BaseCard from './components/UI/BaseCard.vue';
 
 const app = createApp(App);
 
@@ -16,5 +17,6 @@ app.component('BaseButton', BaseButton);
 app.component('BasePrice', BasePrice);
 app.component('BasePoint', BasePoint);
 app.component('BaseLike', BaseLike);
+app.component('BaseCard', BaseCard);
 
 app.mount('#app');

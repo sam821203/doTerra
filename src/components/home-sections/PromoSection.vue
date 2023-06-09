@@ -1,6 +1,6 @@
 <template>
-  <section class="promo layout--main">
-    <div class="promo__left">
+  <section class="promo layout--main m-bottom--xl">
+    <base-card class="promo__left" mode="shadow">
       <div class="promo__left--decor"></div>
       <div class="promo__left--info">
         <div>
@@ -13,7 +13,7 @@
         <div class="product__info">
           <div class="product__text">
             <div class="product__text--capacity">10ml</div>
-            <h4 class="product__text--name">lemongrass</h4>
+            <h3 class="product__text--name">lemongrass</h3>
             <div class="product__text--desc">ingredient・pepper・ipsum</div>
           </div>
           <div class="product__price">
@@ -30,8 +30,8 @@
           <img src="../../images/promo-product.png" alt="">
         </div>
       </div>
-    </div>
-    <div class="promo__right"></div>
+    </base-card>
+    <base-card class="promo__right" mode="flat-gray"></base-card>
   </section>
 </template>
 
@@ -58,8 +58,6 @@ export default {
 .promo__left {
   display: flex;
   width: calc(68% - 10px);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--box-shadow-1);
 
   .promo__left--decor {
     width: 4%;
@@ -73,10 +71,6 @@ export default {
 
     > div {
       border-right: 1px solid var(--gray-300);
-    }
-
-    h2 {
-      font-size: var(--header-1);
     }
   }
 
@@ -134,7 +128,6 @@ export default {
 
   .product__text--name {
     margin-bottom: 8px;
-    font-size: var(--header-2);
   }
 
   .product__price {
@@ -150,8 +143,6 @@ export default {
 .promo__right {
   display: flex;
   width: calc(32% - 10px);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--box-shadow-1);
 }
 
 </style>
