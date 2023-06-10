@@ -10,6 +10,10 @@
         class="mySwiper"
       >
         <swiper-slide v-for="pro in handleSortRanking" :key="pro.title" class="product">
+          <div class="product__badge">{{ pro.topRanking }}</div>
+          <div class="icons">
+            <base-like mode="secondary-bg"></base-like>
+          </div>
           <div class="product__img">
             <div class="img-wrap">
               <img :src="pro.imageUrl" alt="">
@@ -17,6 +21,11 @@
           </div>
           <h3 class="product__title">{{ pro.title }}</h3>
           <h6 class="product__desc">{{ pro.ingredient }}</h6>
+          <div class="product__price--discount">
+            NT$
+            <base-price mode="discount">{{ pro.finalPrice }}</base-price>
+            <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
+          </div>
         </swiper-slide>
       </swiper>
     </div>

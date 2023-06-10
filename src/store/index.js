@@ -18,7 +18,8 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 100]
+        capacity: [20, 100],
+        alsoLike: true,
       },
       {
         isDiscount: false,
@@ -34,7 +35,8 @@ const store = createStore({
         isFavorites: false,
         point: "8,00",
         selectCapacity: '',
-        capacity: [10]
+        capacity: [10],
+        alsoLike: false,
       },
       {
         isDiscount: false,
@@ -50,7 +52,8 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20]
+        capacity: [20],
+        alsoLike: false,
       },
       {
         isDiscount: false,
@@ -66,7 +69,8 @@ const store = createStore({
         isFavorites: true,
         point: "12,50",
         selectCapacity: '',
-        capacity: [450, 100, 200]
+        capacity: [450, 100, 200],
+        alsoLike: false,
       },
       {
         isDiscount: false,
@@ -82,7 +86,8 @@ const store = createStore({
         isFavorites: true,
         point: "8,00",
         selectCapacity: '',
-        capacity: [10]
+        capacity: [10],
+        alsoLike: false,
       },
       {
         isDiscount: false,
@@ -98,7 +103,8 @@ const store = createStore({
         isFavorites: true,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 200]
+        capacity: [20, 200],
+        alsoLike: true,
       },
       {
         isDiscount: false,
@@ -114,7 +120,8 @@ const store = createStore({
         isFavorites: true,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 150]
+        capacity: [20, 150],
+        alsoLike: false,
       },
       {
         isDiscount: true,
@@ -130,7 +137,8 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 150]
+        capacity: [20, 150],
+        alsoLike: false,
       },
       {
         isDiscount: true,
@@ -146,7 +154,8 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 150]
+        capacity: [20, 150],
+        alsoLike: false,
       },
       {
         isDiscount: false,
@@ -162,7 +171,8 @@ const store = createStore({
         isFavorites: true,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 150]
+        capacity: [20, 150],
+        alsoLike: false,
       },
       {
         isDiscount: false,
@@ -178,7 +188,8 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 150]
+        capacity: [20, 150],
+        alsoLike: false,
       },
       {
         isDiscount: true,
@@ -194,7 +205,8 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 150]
+        capacity: [20, 150],
+        alsoLike: false,
       },
       {
         isDiscount: true,
@@ -210,7 +222,59 @@ const store = createStore({
         isFavorites: false,
         point: "12,50",
         selectCapacity: '',
-        capacity: [20, 150]
+        capacity: [20, 150],
+        alsoLike: false,
+      },
+      {
+        isDiscount: true,
+        isLiked: false,
+        isTop: true,
+        topRanking: 8,
+        title: 'Spearmint Oil',
+        finalPrice: "1,600",
+        marketingPrice: "1,480",
+        imageUrl: "https://i.ibb.co/WszQ08c/pro14.png",
+        ingredient: "ingredient・pepper・ipsum",
+        isTimeLimited: false,
+        isFavorites: false,
+        point: "12,50",
+        selectCapacity: '',
+        capacity: [20, 150],
+        alsoLike: true,
+      },
+      {
+        isDiscount: true,
+        isLiked: false,
+        isTop: true,
+        topRanking: 10,
+        title: 'PB Assist Jr',
+        finalPrice: "1,055",
+        marketingPrice: "1,410",
+        imageUrl: "https://i.ibb.co/SVC3JyB/pro15.png",
+        ingredient: "ingredient・pepper・ipsum",
+        isTimeLimited: false,
+        isFavorites: false,
+        point: "12,50",
+        selectCapacity: '',
+        capacity: [20, 150],
+        alsoLike: true,
+      },
+      {
+        isDiscount: true,
+        isLiked: false,
+        isTop: true,
+        topRanking: 9,
+        title: 'Salon Essentials',
+        finalPrice: "1,660",
+        marketingPrice: "1,800",
+        imageUrl: "https://i.ibb.co/BzYn3Zb/pro16.png",
+        ingredient: "ingredient・pepper・ipsum",
+        isTimeLimited: false,
+        isFavorites: false,
+        point: "12,50",
+        selectCapacity: '',
+        capacity: [20, 150],
+        alsoLike: true,
       },
     ]
   },

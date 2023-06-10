@@ -172,6 +172,10 @@ a:visited {
   color: var(--secondary-400);
 }
 
+button {
+  border: none;
+}
+
 .d-flex {
   display: flex;
 }
