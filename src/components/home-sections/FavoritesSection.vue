@@ -7,24 +7,29 @@
       </div>
       <base-card class="favorites__content--box" mode="shadow-rounded">
         <ul>
-          <li v-for="product in isFavoritesProduct" :key="product.title">
-            <div>PROMO</div>
-            <a href="">
+          <li v-for="pro in handleFavorites" :key="pro.title" class="product">
+            <div class="product__tag">
+              <img src="../../images/promo-tag.png" alt="">
+            </div>
+            <a href="" class="product__img">
               <div class="img-wrap">
-                <img :src="product.imageUrl" alt="">
+                <img :src="pro.imageUrl" alt="">
               </div>
             </a>
-            <h3>{{ product.title }}</h3>
-            <p>{{ product.ingredient }}</p>
-            <base-price mode="line-through">{{ product.marketingPrice }}</base-price>
-            <div>
-              <select v-model="product.selectCapacity">
+            <h3 class="product__title">{{ pro.title }}</h3>
+            <p class="product__desc">{{ pro.ingredient }}</p>
+            <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
+            <div class="product__capacity">
+              <select v-model="pro.selectCapacity">
                 <option value="" disabled selected>Capacity</option>
-                <option v-for="(option, index) in product.capacity" :key="index">{{ option }}</option>
+                <option v-for="(option, index) in pro.capacity" :key="index">{{ option }}</option>
               </select>
-              <base-price mode="discount">{{ product.finalPrice }}</base-price>
+              <base-price mode="discount">{{ pro.finalPrice }}</base-price>
             </div>
-            <base-button mode="btn-square">Add to Cart</base-button>
+            <div class="product__cta">
+              <base-button mode="btn-square">Add to Cart</base-button>
+              <base-like mode="primary-outline"></base-like>
+            </div>
           </li>
         </ul>
       </base-card>
@@ -42,12 +47,13 @@ export default {
     const products = store.getters.getProducts;
 
     const isFavoritesProduct = computed(() => products.filter((pro) => pro.isFavorites === true));
+    const handleFavorites = computed(() => isFavoritesProduct.value.slice(0, 4));
 
     const handleCapacity = computed(() => products.map((pro) => (Array.isArray(pro.capacity) ? pro.capacity.join(', ') : pro.capacity)));
 
     return {
       products,
-      isFavoritesProduct: isFavoritesProduct.value,
+      handleFavorites: handleFavorites.value,
       handleCapacity: handleCapacity.value
     };
   },
@@ -60,12 +66,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 16%;
+  padding-bottom: 20%;
 }
 
 ul {
   display: flex;
   justify-content: space-between;
+  padding: 48px 0 26px;
   width: 100%;
 }
 
@@ -97,7 +104,6 @@ p {
 }
 
 .favorites__content--box {
-  padding: 48px 24px 26px;
   width: 100%;
   background-color: var(--gray-100);
   transform: translateY(50px);
@@ -107,5 +113,14 @@ p {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.product__cta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-square {
+  border-radius: 2px 0 0 2px;
 }
 </style>

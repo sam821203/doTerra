@@ -38,10 +38,27 @@ export default {
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .primary-bg svg {
   stroke: var(--primary-200);
+}
+
+.primary-outline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid var(--primary-400);
+  border-radius: 0 2px 2px 0;
+}
+
+.primary-outline svg {
+  stroke: var(--primary-400);
 }
 
 .secondary-bg svg {

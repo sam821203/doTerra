@@ -4,18 +4,17 @@
     <swiper
       :space-between="80"
       :centered-slides="true"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
+      :loop="true"
       :pagination="{
         clickable: true,
       }"
       :navigation="true"
       :modules="modules"
       :slides-per-view="1.75"
-      :slides-per-group="1"
-      :initial-slide="1"
-      :loop="true"
-      :looped-slides="1.75"
-      :watch-slides-progress="true"
-      :watch-slides-visibility="true"
       class="mySwiper"
     >
       <swiper-slide>
@@ -26,6 +25,16 @@
       <swiper-slide>
         <a href="">
           <img src="../../images/slider-2.jpg" alt="">
+        </a>
+      </swiper-slide>
+      <swiper-slide>
+        <a href="">
+          <img src="../../images/slider-3.jpg" alt="">
+        </a>
+      </swiper-slide>
+      <swiper-slide>
+        <a href="">
+          <img src="../../images/slider-3.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>

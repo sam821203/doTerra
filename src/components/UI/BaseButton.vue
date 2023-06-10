@@ -42,13 +42,11 @@ button {
 }
 
 .btn-square {
-  width: 136px;
+  width: 100%;
   height: 40px;
   color: var(--gray-100);
   background-color: var(--primary-300);
   border: 1px solid var(--primary-300);
-  border-radius: var(--border-radius-sm);
   font-weight: 500;
 }
-
 </style>

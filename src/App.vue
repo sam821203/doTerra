@@ -65,8 +65,10 @@ export default {
   --border-radius-circle: 50%;
 
   /* font-size */
-  --header-1: 30px;
-  --header-2: 18px;
+  --header-1: 42px;
+  --header-2: 30px;
+  --header-3: 18px;
+  --header-6: 12px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -106,12 +108,22 @@ body {
   color: var(--secondary-400);
 }
 
-h2 {
+h1 {
   font-size: var(--header-1);
 }
 
-h3 {
+h2 {
   font-size: var(--header-2);
+}
+
+h3 {
+  font-size: var(--header-3);
+}
+
+h6 {
+  font-size: var(--header-6);
+  font-weight: 400;
+  color: var(--secondary-100);
 }
 
 ol, ul {
