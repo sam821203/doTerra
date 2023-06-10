@@ -112,10 +112,6 @@ export default {
   border-radius: var(--border-radius-md);
 }
 
-.product__box {
-  padding: 24px 32px;
-}
-
 .flash-sale__top > div:first-child {
   display: flex;
   justify-content: space-between;
@@ -143,6 +139,7 @@ export default {
 .product__box {
   display: flex;
   justify-content: space-between;
+  padding: 24px 32px;
 }
 
 .product__price--discount {
