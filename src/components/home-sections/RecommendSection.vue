@@ -68,6 +68,7 @@ button {
   height: 700px;
   background-position: center;
   background-size: auto;
+  background-image: url('../../images/recommend-left.jpg');
 }
 
 .buttons > button:first-child {

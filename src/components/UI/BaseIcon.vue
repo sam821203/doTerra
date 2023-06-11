@@ -1,5 +1,9 @@
 <template>
-  <button ref="button" :class="[mode, { active: iconState }]" @click="handleIconState">
+  <button
+    ref="button"
+    :class="[mode, { active: iconState }]"
+    @click="handleIconState"
+  >
     <div v-html="handleIconSrc"></div>
   </button>
 </template>

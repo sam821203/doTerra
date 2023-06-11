@@ -1,5 +1,5 @@
 <template>
-  <section class="stretch">
+  <section class="hero stretch">
     <swiper
       :space-between="80"
       :centered-slides="true"

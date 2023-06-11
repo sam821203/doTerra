@@ -1,5 +1,9 @@
 <template>
-  <button class="img-wrap" :class="[mode, { like: isLikedState }]" @click="handleLikedState">
+  <button
+    class="img-wrap"
+    :class="[mode, { like: isLikedState }]"
+    @click="handleLikedState"
+  >
     <svg
       width="38"
       height="38"
