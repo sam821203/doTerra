@@ -1,21 +1,17 @@
 <template>
-  <section class="favorites m-bottom--xl">
+  <section class="expand m-bottom--xl">
     <div class="favorites__bg"></div>
-    <div class="favorites__content layout--main">
+    <div class="favorites__content">
       <div class="favorites__content--title">
         <img src="../../images/favorites-title.png" alt="">
       </div>
       <base-card class="favorites__content--box" mode="shadow-rounded">
         <ul>
-          <li v-for="pro in handleFavorites" :key="pro.title" class="product">
-            <div class="product__tag">
-              <img src="../../images/promo-tag.png" alt="">
-            </div>
-            <a href="" class="product__img">
-              <div class="img-wrap">
-                <img :src="pro.imageUrl" alt="">
-              </div>
-            </a>
+          <li v-for="pro in handleFavorites" :key="pro.title">
+            <img src="../../images/promo-tag.png" alt="">
+            <base-image>
+              <img :src="pro.imageUrl" alt="">
+            </base-image>
             <h3 class="product__title">{{ pro.title }}</h3>
             <p class="product__desc">{{ pro.ingredient }}</p>
             <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
@@ -28,7 +24,7 @@
             </div>
             <div class="product__cta">
               <base-button mode="btn-square">Add to Cart</base-button>
-              <base-like mode="primary-outline"></base-like>
+              <base-icon :svg-paths="storePaths" mode="like secondary-bg"></base-icon>
             </div>
           </li>
         </ul>
@@ -45,16 +41,14 @@ export default {
   setup() {
     const store = useStore();
     const products = store.getters.getProducts;
-
     const isFavoritesProduct = computed(() => products.filter((pro) => pro.isFavorites === true));
     const handleFavorites = computed(() => isFavoritesProduct.value.slice(0, 4));
 
-    const handleCapacity = computed(() => products.map((pro) => (Array.isArray(pro.capacity) ? pro.capacity.join(', ') : pro.capacity)));
+    const storePaths = computed(() => store.state.svgPaths);
 
     return {
-      products,
-      handleFavorites: handleFavorites.value,
-      handleCapacity: handleCapacity.value
+      handleFavorites,
+      storePaths
     };
   },
 };
@@ -82,7 +76,6 @@ li {
   background-color: var(--gray-100);
 }
 
-.img-wrap,
 h3,
 p {
   text-align: center;
@@ -112,7 +105,10 @@ p {
 .favorites__content {
   position: absolute;
   top: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  max-width: 1280px;
 }
 
 .product__cta {

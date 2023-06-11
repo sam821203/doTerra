@@ -108,6 +108,12 @@ body {
   color: var(--secondary-400);
 }
 
+section:not(.expand) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+
 h1 {
   font-size: var(--header-1);
 }
@@ -226,6 +232,27 @@ button {
 
 .m-bottom--xl {
   margin-bottom: 32px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  background: #fff;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .layout--main {

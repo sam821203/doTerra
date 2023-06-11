@@ -1,5 +1,5 @@
 <template>
-  <section class="recommend layout--main m-bottom--xl">
+  <section class="m-bottom--xl">
     <div class="recommend__block">
       <base-card class="recommend__left" mode="shadow">
         <div class="overlay">

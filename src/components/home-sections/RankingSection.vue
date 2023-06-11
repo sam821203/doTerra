@@ -1,5 +1,5 @@
 <template>
-  <section class="ranking layout--main m-bottom--xl">
+  <section class="ranking m-bottom--xl">
     <h2>Top 10 Ranking</h2>
     <div class="ranking__block">
       <swiper
@@ -12,7 +12,7 @@
         <swiper-slide v-for="pro in handleSortRanking" :key="pro.title" class="product">
           <div class="product__badge">{{ pro.topRanking }}</div>
           <div class="icons">
-            <base-like mode="secondary-bg"></base-like>
+            <base-icon mode="like secondary-bg"></base-icon>
           </div>
           <div class="product__img">
             <div class="img-wrap">
@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h2 {
   margin-bottom: 16px;
 }

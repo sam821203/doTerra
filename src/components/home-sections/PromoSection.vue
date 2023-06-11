@@ -1,5 +1,5 @@
 <template>
-  <section class="promo layout--main m-bottom--xl">
+  <section class="promo m-bottom--xl">
     <base-card class="promo__left" mode="shadow">
       <div class="promo__left--decor"></div>
       <div class="promo__left--info">

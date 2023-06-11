@@ -1,5 +1,5 @@
 <template>
-  <section class="also-like layout--main m-bottom--xl">
+  <section class="m-bottom--xl">
     <div>
       <h2>Product You May Also Like</h2>
       <h6>View more</h6>
@@ -74,7 +74,7 @@ li {
   margin-bottom: 10px;
 }
 
-.also-like > div:first-child {
+section > div:first-child {
   display: flex;
   justify-content: space-between;
   align-items: end;

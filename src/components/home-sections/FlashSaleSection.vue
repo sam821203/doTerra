@@ -1,5 +1,5 @@
 <template>
-  <section class="flash-sale layout--main m-bottom--xl">
+  <section class="m-bottom--xl">
     <div class="flash-sale__top">
       <div class="flash-sale__text">
         <p>One-time use code for <span>$10 off</span> of a $25 purchase!</p>
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style scoped>
-.flash-sale {
+section {
   display: flex;
   flex-direction: column;
 }

@@ -1,13 +1,8 @@
 <template>
-  <section class="hero">
-    <!-- fix here -->
+  <section class="expand">
     <swiper
       :space-between="80"
       :centered-slides="true"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
-      }"
       :loop="true"
       :pagination="{
         clickable: true,
@@ -67,31 +62,8 @@ export default {
 };
 </script>
 
-<style>
-  .hero {
+<style scoped>
+  section {
     padding: 2% 0;
-  }
-
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* width: auto !important; */
-    font-size: 18px;
-    text-align: center;
-    background: #fff;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 </style>
