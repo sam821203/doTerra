@@ -1,5 +1,5 @@
 <template>
-  <div :class="mode">
+  <div class="card" :class="mode">
     <slot />
   </div>
 </template>

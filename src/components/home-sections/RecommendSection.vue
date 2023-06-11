@@ -1,5 +1,5 @@
 <template>
-  <section class="m-bottom--xl">
+  <section class="recommend">
     <div class="recommend__block">
       <base-card class="recommend__left" mode="shadow">
         <div class="overlay">
@@ -23,6 +23,7 @@
 <style scoped>
 section {
   position: relative;
+  margin-bottom: 112px;
   color: var(--gray-100);
 }
 
@@ -38,6 +39,10 @@ h2 > span {
 
 h6 {
   color: rgba(255, 255, 255, 0.75);
+}
+
+button {
+  background-color: var(--primary-300);
 }
 
 .overlay {
@@ -63,11 +68,6 @@ h6 {
   height: 700px;
   background-position: center;
   background-size: auto;
-  background-image: url('../../images/recommend-left.jpg');
-}
-
-button {
-  background-color: var(--primary-300);
 }
 
 .buttons > button:first-child {

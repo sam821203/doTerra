@@ -1,6 +1,6 @@
 <template>
   <a href="">
-    <div :class="mode">
+    <div class="img-wrap" :class="mode">
       <slot />
     </div>
   </a>

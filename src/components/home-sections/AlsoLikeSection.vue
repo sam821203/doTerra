@@ -1,17 +1,17 @@
 <template>
-  <section class="m-bottom--xl">
+  <section class="also-like">
     <div>
       <h2>Product You May Also Like</h2>
       <h6>View more</h6>
     </div>
-    <ul class="also-like__block">
+    <ul>
       <li v-for="pro in handleAlsoLike" :key="pro.title">
         <div class="icons">
           <base-like mode="secondary-bg"></base-like>
         </div>
-        <div class="product__img">
+        <base-image>
           <img :src="pro.imageUrl" alt="">
-        </div>
+        </base-image>
         <h3 class="product__title">{{ pro.title }}</h3>
         <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
         <div>
@@ -44,9 +44,20 @@ export default {
 </script>
 
 <style scoped>
+section {
+  margin-bottom: 130px;
+}
+
+section > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
 ul {
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
 li {
@@ -54,29 +65,18 @@ li {
   width: calc(20% - 16px);
 }
 
-.also-like__block {
-  text-align: center;
-}
-
 .icons > button {
   position: absolute;
   right: 4%;
 }
 
-.product__img {
+.img-wrap {
   margin-bottom: 20px;
   height: 240px;
-  text-align: center;
   line-height: 240px;
 }
 
 .product__title {
   margin-bottom: 10px;
-}
-
-section > div:first-child {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
 }
 </style>

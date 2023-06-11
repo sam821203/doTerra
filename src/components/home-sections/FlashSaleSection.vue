@@ -1,11 +1,11 @@
 <template>
-  <section class="m-bottom--xl">
-    <div class="flash-sale__top">
-      <div class="flash-sale__text">
+  <section class="flash-sale">
+    <div class="section__title">
+      <div>
         <p>One-time use code for <span>$10 off</span> of a $25 purchase!</p>
         <h2>Countdown</h2>
       </div>
-      <div class="flash-sale__countdown">
+      <div class="countdown">
         <div>
           <img src="../../images/lightning.svg" alt="">
         </div>
@@ -30,35 +30,35 @@
         </div>
       </div>
     </div>
-    <div class="flash-sale__bottom">
-      <div v-for="product in isTimeLimitedProduct" :key="product.title" class="product">
-        <div class="product__box">
-          <div class="product__content">
-            <div class="product__title">
-              <h3>{{ product.title }}</h3><span>{{ product.capacity }}ml</span>
-            </div>
-            <div class="product__ingredient">{{ product.ingredient }}</div>
-            <base-point mode="outline">{{ product.point }}</base-point>
-            <div class="product__price--discount">
-              NT$
-              <base-price mode="discount">{{ product.finalPrice }}</base-price>
-              <base-price mode="line-through">{{ product.marketingPrice }}</base-price>
-            </div>
-          </div>
-          <div class="product__image">
-            <div class="icons">
-              <base-like mode="secondary-bg"></base-like>
-            </div>
-            <div class="image">
-              <div></div>
-              <div class="img-wrap">
-                <img :src="product.imageUrl" alt="">
-              </div>
-            </div>
+    <ul class="section__block">
+      <li
+        v-for="pro in isTimeLimitedProduct"
+        :key="pro.title"
+        class="product"
+      >
+        <div class="product__content">
+          <h3>{{ pro.title }}</h3><span>{{ pro.capacity }}ml</span>
+          <h6>{{ pro.ingredient }}</h6>
+          <base-point mode="outline">{{ pro.point }}</base-point>
+          <div class="product__price">
+            NT$
+            <base-price mode="discount">{{ pro.finalPrice }}</base-price>
+            <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="product__image">
+          <div class="icons">
+            <base-like mode="secondary-bg"></base-like>
+          </div>
+          <div class="image">
+            <div></div>
+            <base-image>
+              <img :src="pro.imageUrl" alt="">
+            </base-image>
+          </div>
+        </div>
+      </li>
+    </ul>
   </section>
 </template>
 
@@ -85,19 +85,29 @@ export default {
 section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
 }
 
-.flash-sale__top {
+a {
+  position: absolute;
+  top: 0;
+}
+
+h2 {
+  padding-right: 12px;
+}
+
+h6 {
+  color: var(--secondary-300);
+}
+
+.section__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.flash-sale__text h2 {
-  padding-right: 12px;
-}
-
-.flash-sale__bottom {
+.section__block {
   display: flex;
   justify-content: space-between;
   padding: 24px 32px;
@@ -106,25 +116,25 @@ section {
   box-shadow: var(--box-shadow-1);
 }
 
-.flash-sale__bottom > div {
+.section__block > li {
   width: calc(33% - 13.333px);
   background-color: var(--gray-100);
   border-radius: var(--border-radius-md);
 }
 
-.flash-sale__top > div:first-child {
+.section__title > div:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 76%;
 }
 
-.flash-sale__top > div:last-child {
+.section__title > div:last-child {
   width: 24%;
   background-color: var(--gray-300);
 }
 
-.flash-sale__countdown {
+.countdown {
   display: flex;
   justify-content: space-around;
 }
@@ -136,13 +146,13 @@ section {
   border-radius: var(--border-radius-sm);
 }
 
-.product__box {
+.product {
   display: flex;
   justify-content: space-between;
   padding: 24px 32px;
 }
 
-.product__price--discount {
+.product__price {
   margin-top: 12px;
   color: var(--red-500);
 }
@@ -156,10 +166,5 @@ section {
 
 .image {
   position: relative;
-}
-
-.image > div:last-child {
-  position: absolute;
-  top: 0;
 }
 </style>

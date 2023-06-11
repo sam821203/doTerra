@@ -5,6 +5,7 @@ const store = createStore({
     isLoading: true,
     products: [
       {
+        id: "pro1",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -23,6 +24,7 @@ const store = createStore({
         alsoLike: true,
       },
       {
+        id: "pro2",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -41,6 +43,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro3",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -59,6 +62,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro4",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -77,6 +81,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro5",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -95,6 +100,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro6",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -113,6 +119,7 @@ const store = createStore({
         alsoLike: true,
       },
       {
+        id: "pro7",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -131,6 +138,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro8",
         isDiscount: true,
         isLiked: false,
         inCart: false,
@@ -149,6 +157,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro9",
         isDiscount: true,
         isLiked: false,
         inCart: false,
@@ -167,6 +176,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro10",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -185,6 +195,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro11",
         isDiscount: false,
         isLiked: false,
         inCart: false,
@@ -203,6 +214,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro12",
         isDiscount: true,
         isLiked: false,
         inCart: false,
@@ -221,6 +233,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro13",
         isDiscount: true,
         isLiked: false,
         inCart: false,
@@ -239,6 +252,7 @@ const store = createStore({
         alsoLike: false,
       },
       {
+        id: "pro14",
         isDiscount: true,
         isLiked: false,
         inCart: false,
@@ -257,6 +271,7 @@ const store = createStore({
         alsoLike: true,
       },
       {
+        id: "pro15",
         isDiscount: true,
         isLiked: false,
         inCart: false,
@@ -275,6 +290,7 @@ const store = createStore({
         alsoLike: true,
       },
       {
+        id: "pro16",
         isDiscount: true,
         isLiked: false,
         inCart: false,

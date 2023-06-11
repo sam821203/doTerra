@@ -108,7 +108,7 @@ body {
   color: var(--secondary-400);
 }
 
-section:not(.expand) {
+section:not(.stretch) {
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;

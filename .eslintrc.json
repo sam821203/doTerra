@@ -48,7 +48,7 @@
       "error",
       {
         "singleline": {
-          "max": 3
+          "max": 2
         }
       }
     ],

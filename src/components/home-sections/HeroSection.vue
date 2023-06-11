@@ -1,5 +1,5 @@
 <template>
-  <section class="expand">
+  <section class="stretch">
     <swiper
       :space-between="80"
       :centered-slides="true"

@@ -1,5 +1,5 @@
 <template>
-  <section class="promo m-bottom--xl">
+  <section class="promo">
     <base-card class="promo__left" mode="shadow">
       <div class="promo__left--decor"></div>
       <div class="promo__left--info">
@@ -50,9 +50,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.promo {
+section {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .promo__left {
