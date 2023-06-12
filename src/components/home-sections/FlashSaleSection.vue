@@ -2,7 +2,7 @@
   <section class="flash-sale">
     <div class="section__title">
       <div>
-        <p>One-time use code for <span>$10 off</span> of a $25 purchase!</p>
+        <p>One-time use code for <span class="">$10 off</span> of a $25 purchase!</p>
         <h2>Countdown</h2>
       </div>
       <div class="countdown">
@@ -25,7 +25,7 @@
             <span>2</span>
           </div>
           <span>:</span>
-          <div class="countdown__box">
+          <div class="countdown__box millisecond">
             <span>4</span>
             <span>9</span>
           </div>
@@ -39,25 +39,30 @@
         class="product"
       >
         <div class="product__content">
-          <h3>{{ pro.title }}</h3><span>{{ pro.capacity }}ml</span>
-          <h6>{{ pro.ingredient }}</h6>
-          <base-point mode="outline">{{ pro.point }}</base-point>
-          <div class="product__price">
-            NT$
-            <base-price mode="discount">{{ pro.finalPrice }}</base-price>
-            <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
+          <div>
+            <div class="product__title">
+              <h3>{{ pro.title }}</h3><span>({{ pro.capacity[0] }}ml)</span>
+            </div>
+            <h6>{{ pro.ingredient }}</h6>
+          </div>
+          <div>
+            <base-point mode="outline">{{ pro.point }}</base-point>
+            <div class="product__price">
+              NT$
+              <base-price mode="discount">{{ pro.finalPrice }}</base-price>
+              <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
+            </div>
           </div>
         </div>
-        <div class="product__image">
-          <div class="icons">
-            <base-like mode="secondary-bg"></base-like>
-          </div>
-          <div class="image">
-            <div></div>
-            <base-image>
-              <img :src="pro.imageUrl" alt="">
-            </base-image>
-          </div>
+        <div class="product__icons">
+          <base-icon mode="like secondary-bg"></base-icon>
+          <base-icon mode="cart secondary-bg"></base-icon>
+        </div>
+        <div class="product__img">
+          <div></div>
+          <base-image>
+            <img :src="pro.imageUrl" alt="">
+          </base-image>
         </div>
       </li>
     </ul>
@@ -92,7 +97,10 @@ section {
 
 a {
   position: absolute;
-  top: 0;
+  top: -16%;
+  right: -6%;
+  width: max-content;
+  max-width: 148px;
 }
 
 h2 {
@@ -100,7 +108,10 @@ h2 {
 }
 
 h6 {
+  padding-top: 8px;
+  margin-bottom: 24px;
   color: var(--secondary-300);
+  border-top: 1px solid var(--gray-400);
 }
 
 .section__title {
@@ -135,6 +146,10 @@ h6 {
   align-items: center;
   width: 78%;
   background-color: var(--gray-100);
+}
+
+.section__title p span {
+  color: var(--red-500);
 }
 
 .countdown {
@@ -183,9 +198,16 @@ h6 {
   line-height: 36px;
 }
 
+.millisecond {
+  color: var(--red-500);
+  background-color: var(--red-200);
+}
+
 .product {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: end;
   padding: 24px 32px;
 }
 
@@ -194,14 +216,49 @@ h6 {
   color: var(--red-500);
 }
 
-.image > div:first-child {
+.product__img {
+  position: relative;
+  transform: translate(-24px, 8px);
+}
+
+.product__img > div:first-child {
   width: 132px;
   height: 132px;
   background-color: var(--gray-300);
   border-radius: var(--border-radius-circle);
+  transform: translateY(4px);
 }
 
-.image {
-  position: relative;
+.product__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product__title {
+  display: flex;
+  align-items: end;
+  margin-bottom: 16px;
+}
+
+.product__title h3 {
+  margin-right: 8px;
+}
+
+.product__title span {
+  font-size: 12px;
+  color: var(--secondary-200);
+}
+
+.product__icons {
+  position: absolute;
+  top: 8%;
+  right: 24px;
+  z-index: 1;
+  display: flex;
+}
+
+.product__icons button {
+  margin-left: -6px;
 }
 </style>

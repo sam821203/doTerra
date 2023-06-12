@@ -30,7 +30,7 @@
             </div>
             <div class="buttons">
               <base-button mode="btn-square">Add to Cart</base-button>
-              <base-icon :svg-paths="storePaths" mode="like secondary-bg"></base-icon>
+              <base-icon mode="like secondary-bg"></base-icon>
             </div>
           </li>
         </ul>
@@ -50,11 +50,8 @@ export default {
     const isFavoritesProduct = computed(() => products.filter((pro) => pro.isFavorites === true));
     const handleFavorites = computed(() => isFavoritesProduct.value.slice(0, 4));
 
-    const storePaths = computed(() => store.getters.getSvgPaths);
-
     return {
       handleFavorites,
-      storePaths
     };
   },
 };
