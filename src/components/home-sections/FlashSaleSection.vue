@@ -7,7 +7,7 @@
       </div>
       <div class="countdown">
         <div>
-          <img src="../../images/lightning.svg" alt="">
+          <img src="../../assets/images/lightning.svg" alt="">
         </div>
         <div class="countdown__box">
           <span>0</span>

@@ -1,6 +1,6 @@
 <template>
   <section class="recommend">
-    <div class="recommend__block">
+    <div class="section__block">
       <base-card class="recommend__left" mode="shadow">
         <div class="overlay">
           <h2>Dr. Hill<span>Recommends</span></h2>
@@ -54,12 +54,12 @@ button {
   border-radius: 0 0 6px 6px;
 }
 
-.recommend__block {
+.section__block {
   display: flex;
   justify-content: space-between;
 }
 
-.recommend__block > div {
+.section__block > div {
   width: calc(50% - 10px);
 }
 
@@ -68,7 +68,7 @@ button {
   height: 700px;
   background-position: center;
   background-size: auto;
-  background-image: url('../../images/recommend-left.jpg');
+  background-image: url('../../assets/images/recommend-left.jpg');
 }
 
 .buttons > button:first-child {

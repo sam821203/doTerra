@@ -7,7 +7,7 @@
   <header>
     <div class="header__wrap layout--main">
       <div class="header__left">
-        <img src="../../images/logo.svg" alt="">
+        <img src="../../assets/images/logo.svg" alt="">
       </div>
       <ul class="header__center">
         <li>
@@ -22,29 +22,29 @@
         <li>
           <input type="text" placeholder="Search...">
           <base-button mode="btn-search">
-            <img src="../../images/search.svg" alt="">
+            <img src="../../assets/images/search.svg" alt="">
           </base-button>
         </li>
       </ul>
       <div class="header__right">
         <div>
           <a href="">
-            <img src="../../images/help.svg" alt="">
+            <img src="../../assets/images/help.svg" alt="">
           </a>
         </div>
         <div>
           <a href="">
-            <img src="../../images/account.svg" alt="">
+            <img src="../../assets/images/account.svg" alt="">
           </a>
         </div>
         <div>
           <a href="">
-            <img src="../../images/like.svg" alt="">
+            <img src="../../assets/images/like.svg" alt="">
           </a>
         </div>
         <div>
           <a href="">
-            <img src="../../images/cart.svg" alt="">
+            <img src="../../assets/images/cart.svg" alt="">
           </a>
         </div>
       </div>

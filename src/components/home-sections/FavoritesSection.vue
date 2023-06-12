@@ -3,12 +3,12 @@
     <div class="section__bg"></div>
     <div class="section__block">
       <div class="title">
-        <img src="../../images/favorites-title.png" alt="">
+        <img src="../../assets/images/favorites-title.png" alt="">
       </div>
       <base-card mode="shadow-rounded">
         <ul>
           <li v-for="pro in handleFavorites" :key="pro.title">
-            <img src="../../images/promo-tag.png" alt="">
+            <img src="../../assets/images/promo-tag.png" alt="">
             <base-image>
               <img :src="pro.imageUrl" alt="">
             </base-image>

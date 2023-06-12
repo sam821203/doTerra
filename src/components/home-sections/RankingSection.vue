@@ -1,7 +1,7 @@
 <template>
   <section class="ranking">
     <h2>Top 10 Ranking</h2>
-    <div class="ranking__block">
+    <div class="section__block">
       <swiper
         :slides-per-view="6"
         :space-between="20"
@@ -81,7 +81,7 @@ h2 {
   flex-direction: column;
 }
 
-.ranking__block {
+.section__block {
   border-top: 1px solid var(--gray-300);
 }
 

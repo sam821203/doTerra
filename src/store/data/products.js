@@ -303,6 +303,25 @@ const products = [
     capacity: [20, 150],
     alsoLike: true,
   },
+  {
+    id: "pro17",
+    isDiscount: true,
+    isLiked: false,
+    inCart: false,
+    isTop: false,
+    topRanking: null,
+    title: 'Guard Toothpaste',
+    finalPrice: "660",
+    marketingPrice: "800",
+    imageUrl: "https://i.ibb.co/ZJsHP74/pro17.png",
+    ingredient: "ingredient・pepper・ipsum",
+    isTimeLimited: false,
+    isFavorites: false,
+    point: "12,50",
+    selectCapacity: '',
+    capacity: [50],
+    alsoLike: false,
+  },
 ];
 
 export default products;

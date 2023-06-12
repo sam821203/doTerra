@@ -14,27 +14,27 @@
     >
       <swiper-slide>
         <a href="">
-          <img src="../../images/slider-1.jpg" alt="">
+          <img src="../../assets/images/slider-1.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="">
-          <img src="../../images/slider-2.jpg" alt="">
+          <img src="../../assets/images/slider-2.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="">
-          <img src="../../images/slider-3.jpg" alt="">
+          <img src="../../assets/images/slider-3.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="">
-          <img src="../../images/slider-3.jpg" alt="">
+          <img src="../../assets/images/slider-3.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="">
-          <img src="../../images/slider-3.jpg" alt="">
+          <img src="../../assets/images/slider-3.jpg" alt="">
         </a>
       </swiper-slide>
     </swiper>
