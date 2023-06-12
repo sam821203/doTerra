@@ -4,13 +4,13 @@
       <div class="decoration"></div>
       <div class="info">
         <div>
-          <h2 class="m-bottom--sm">Scents of the Season</h2>
-          <p class="m-bottom--md">For life's fast-paced moments, from a busy work day to festive activities, try using Wild Orange during periods of low energy for a quick boost.</p>
+          <h2 class="mb-sm">Scents of the Season</h2>
+          <p class="mb-md">For life's fast-paced moments, from a busy work day to festive activities, try using Wild Orange during periods of low energy for a quick boost.</p>
           <base-button mode="btn-round">Add to Cart</base-button>
         </div>
       </div>
       <div class="product">
-        <div class="product__info">
+        <div class="product__content">
           <div>
             <div class="product__capacity">10ml</div>
             <h3 class="product__title">lemongrass</h3>
@@ -135,10 +135,10 @@ li {
 
 .section__left .product__imgs img:last-child {
   top: -6%;
-    right: 22%;
+  right: 22%;
 }
 
-.section__left .product__info {
+.section__left .product__content {
   display: flex;
   justify-content: space-between;
   padding: 0 12px 0 4px;

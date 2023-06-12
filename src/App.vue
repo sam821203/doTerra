@@ -104,7 +104,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
   color: var(--secondary-400);
 }
 
@@ -186,51 +186,51 @@ button {
   display: flex;
 }
 
-.m-top--xs {
+.mt-xs {
   margin-top: 2%;
 }
 
-.m-top--sm {
+.mt-sm {
   margin-top: 4%;
 }
 
-.m-top--md {
+.mt-md {
   margin-top: 6%;
 }
 
-.m-top--lg {
+.mt-lg {
   margin-top: 8%;
 }
 
-.m-top--xl {
+.mt-xl {
   margin-top: 10%;
 }
 
-.m-top--xxl {
+.mt-xxl {
   margin-top: 14%;
 }
 
-.m-top--3xl {
+.mt-3xl {
   margin-top: 18%;
 }
 
-.m-bottom--xxs {
+.mb-xxs {
   margin-bottom: 1%;
 }
 
-.m-bottom--xs {
+.mb-xs {
   margin-bottom: 2%;
 }
 
-.m-bottom--sm {
+.mb-sm {
   margin-bottom: 4%;
 }
 
-.m-bottom--md {
+.mb-md {
   margin-bottom: 8%;
 }
 
-.m-bottom--xl {
+.mb-xl {
   margin-bottom: 32px;
 }
 

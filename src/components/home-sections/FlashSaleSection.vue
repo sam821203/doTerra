@@ -6,27 +6,29 @@
         <h2>Countdown</h2>
       </div>
       <div class="countdown">
-        <div>
-          <img src="../../assets/images/lightning.svg" alt="">
-        </div>
-        <div class="countdown__box">
-          <span>0</span>
-          <span>0</span>
-        </div>
-        <span>:</span>
-        <div class="countdown__box">
-          <span>0</span>
-          <span>6</span>
-        </div>
-        <span>:</span>
-        <div class="countdown__box">
-          <span>3</span>
-          <span>2</span>
-        </div>
-        <span>:</span>
-        <div class="countdown__box">
-          <span>4</span>
-          <span>9</span>
+        <div class="countdown__block">
+          <div>
+            <img src="../../assets/images/lightning.svg" alt="">
+          </div>
+          <div class="countdown__box">
+            <span>0</span>
+            <span>0</span>
+          </div>
+          <span>:</span>
+          <div class="countdown__box">
+            <span>0</span>
+            <span>6</span>
+          </div>
+          <span>:</span>
+          <div class="countdown__box">
+            <span>3</span>
+            <span>2</span>
+          </div>
+          <span>:</span>
+          <div class="countdown__box">
+            <span>4</span>
+            <span>9</span>
+          </div>
         </div>
       </div>
     </div>
@@ -94,7 +96,7 @@ a {
 }
 
 h2 {
-  padding-right: 12px;
+  padding-right: 32px;
 }
 
 h6 {
@@ -105,6 +107,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 }
 
 .section__block {
@@ -122,28 +125,62 @@ h6 {
   border-radius: var(--border-radius-md);
 }
 
+.section__title > div {
+  height: 100%;
+}
+
 .section__title > div:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 76%;
-}
-
-.section__title > div:last-child {
-  width: 24%;
-  background-color: var(--gray-300);
+  width: 78%;
+  background-color: var(--gray-100);
 }
 
 .countdown {
+  position: relative;
+  z-index: 2;
+  padding: 4px;
+  width: 22%;
+  background-color: var(--gray-300);
+  border-radius: 6px 6px 0 0
+}
+
+.countdown::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-300);
+  border-right-width: 0;
+  border-radius: 6px 6px 0 0;
+  filter: drop-shadow(2px -9px 6px rgba(0, 0, 0, 0.03));
+  content: '';
+  transform: perspective(14px) rotateX(1deg);
+  transform-origin: top right;
+}
+
+.countdown__block {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin-top: 4.4%;
+  transform: translateX(-8px);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondary-100);
 }
 
 .countdown__box {
   width: 40px;
   height: 36px;
+  text-align: center;
+  color: var(--secondary-400);
   background-color: #fff;
   border-radius: var(--border-radius-sm);
+  line-height: 36px;
 }
 
 .product {

@@ -10,6 +10,7 @@
       :navigation="true"
       :modules="modules"
       :slides-per-view="1.75"
+      :initial-slide="1"
       class="mySwiper"
     >
       <swiper-slide>
