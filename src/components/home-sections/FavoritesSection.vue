@@ -30,7 +30,11 @@
             </div>
             <div class="buttons">
               <base-button mode="btn-square">Add to Cart</base-button>
-              <base-icon mode="like secondary-bg"></base-icon>
+              <base-icon
+                :product-id="pro.id"
+                :is-liked="pro.isLiked"
+                mode="like primary-outline"
+              ></base-icon>
             </div>
           </li>
         </ul>

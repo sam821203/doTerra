@@ -30,15 +30,18 @@ export default {
     },
     productId: {
       type: String,
-      required: true
+      required: true,
+      default: null,
     },
     isLiked: {
-      type: String,
-      required: true
+      type: Boolean,
+      required: false,
+      default: null,
     },
     inCart: {
-      type: String,
-      required: true
+      type: Boolean,
+      required: false,
+      default: null,
     }
   },
   setup(props) {
@@ -52,39 +55,8 @@ export default {
       } if (instance.props.mode.includes('cart')) {
         return 'cart';
       }
-
-      return 'no';
+      return '';
     });
-
-    // const isLikedState = computed(() => store.getters.isLiked);
-    // const inCartState = computed(() => store.getters.inCart);
-
-    // const isLikedState = computed(() => store.getters.isLiked);
-
-    // const isActive = computed(() => {
-    //   let iconState = null;
-
-    //   if (!button.value) return false;
-
-    //   if (button.value.classList.contains('like')) {
-    //     iconState = isLikedState.value;
-    //   }
-
-    //   if (button.value.classList.contains('cart')) {
-    //     iconState = inCartState.value;
-    //   }
-    //   return iconState;
-    // });
-
-    // const handleIconState = () => {
-    //   if (button.value && button.value.classList.contains('like')) {
-    //     store.dispatch('handleLiked');
-    //   }
-
-    //   if (button.value && button.value.classList.contains('cart')) {
-    //     store.dispatch('handleCart');
-    //   }
-    // };
 
     const toggleLike = () => {
       store.commit('toggleLike', props.productId);
@@ -121,14 +93,10 @@ export default {
 
     return {
       button,
-      // handleIconState,
       handleIconSrc,
-      // isLikedState,
-      // inCartState,
       toggleLike,
       toggleCart,
       checkClass,
-      // isActive
     };
   },
 };

@@ -7,7 +7,11 @@
     <ul>
       <li v-for="pro in handleAlsoLike" :key="pro.title">
         <div class="icons">
-          <base-like mode="secondary-bg"></base-like>
+          <base-icon
+            :product-id="pro.id"
+            :is-liked="pro.isLiked"
+            mode="like secondary-bg"
+          ></base-icon>
         </div>
         <base-image>
           <img :src="pro.imageUrl" alt="">
