@@ -55,8 +55,16 @@
           </div>
         </div>
         <div class="product__icons">
-          <base-icon mode="like secondary-bg"></base-icon>
-          <base-icon mode="cart secondary-bg"></base-icon>
+          <base-icon
+            :product-id="pro.id"
+            :is-liked="pro.isLiked"
+            mode="like secondary-bg"
+          ></base-icon>
+          <base-icon
+            :product-id="pro.id"
+            :in-cart="pro.inCart"
+            mode="cart secondary-bg"
+          ></base-icon>
         </div>
         <div class="product__img">
           <div></div>

@@ -1,15 +1,24 @@
 <template>
   <button
+    v-if="checkClass === 'like'"
     ref="button"
-    :class="[mode, { active: iconState }]"
-    @click="handleIconState"
+    :class="[mode, { active: isLiked }]"
+    @click="toggleLike"
+  >
+    <div v-html="handleIconSrc"></div>
+  </button>
+  <button
+    v-if="checkClass === 'cart'"
+    ref="button"
+    :class="[mode, { active: inCart }]"
+    @click="toggleCart"
   >
     <div v-html="handleIconSrc"></div>
   </button>
 </template>
 
 <script>
-import { computed, ref, onMounted, watch } from 'vue';
+import { computed, ref, getCurrentInstance } from 'vue';
 import { useStore } from 'vuex';
 
 export default {
@@ -19,43 +28,70 @@ export default {
       required: false,
       default: null,
     },
+    productId: {
+      type: String,
+      required: true
+    },
+    isLiked: {
+      type: String,
+      required: true
+    },
+    inCart: {
+      type: String,
+      required: true
+    }
   },
   setup(props) {
     const store = useStore();
     const button = ref(null);
-    const iconState = ref(null);
+    const instance = getCurrentInstance();
 
-    onMounted(() => {
-      // 初始赋值
-      if (button.value && button.value.classList.contains('like')) {
-        iconState.value = computed(() => store.getters.isLiked);
+    const checkClass = computed(() => {
+      if (instance.props.mode.includes('like')) {
+        return 'like';
+      } if (instance.props.mode.includes('cart')) {
+        return 'cart';
       }
 
-      if (props.mode === 'cart') {
-        iconState.value = computed(() => store.getters.inCart);
-      }
+      return 'no';
     });
 
-    watch(button, (newValue) => {
-      if (newValue) {
-        if (newValue.classList.contains('like')) {
-          iconState.value = computed(() => store.getters.isLiked);
-        }
+    // const isLikedState = computed(() => store.getters.isLiked);
+    // const inCartState = computed(() => store.getters.inCart);
 
-        if (props.mode === 'cart') {
-          iconState.value = computed(() => store.getters.inCart);
-        }
-      }
-    });
+    // const isLikedState = computed(() => store.getters.isLiked);
 
-    const handleIconState = () => {
-      if (button.value && button.value.classList.contains('like')) {
-        store.dispatch('handleLiked');
-      }
+    // const isActive = computed(() => {
+    //   let iconState = null;
 
-      if (button.value && button.value.classList.contains('cart')) {
-        store.dispatch('handleLiked');
-      }
+    //   if (!button.value) return false;
+
+    //   if (button.value.classList.contains('like')) {
+    //     iconState = isLikedState.value;
+    //   }
+
+    //   if (button.value.classList.contains('cart')) {
+    //     iconState = inCartState.value;
+    //   }
+    //   return iconState;
+    // });
+
+    // const handleIconState = () => {
+    //   if (button.value && button.value.classList.contains('like')) {
+    //     store.dispatch('handleLiked');
+    //   }
+
+    //   if (button.value && button.value.classList.contains('cart')) {
+    //     store.dispatch('handleCart');
+    //   }
+    // };
+
+    const toggleLike = () => {
+      store.commit('toggleLike', props.productId);
+    };
+
+    const toggleCart = () => {
+      store.commit('toggleCart', props.productId);
     };
 
     const handleIconSrc = computed(() => {
@@ -85,9 +121,14 @@ export default {
 
     return {
       button,
-      iconState,
-      handleIconState,
+      // handleIconState,
       handleIconSrc,
+      // isLikedState,
+      // inCartState,
+      toggleLike,
+      toggleCart,
+      checkClass,
+      // isActive
     };
   },
 };
