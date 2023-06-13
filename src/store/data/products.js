@@ -1,6 +1,8 @@
+let proId = 0;
+
 const products = [
   {
-    id: "pro1",
+    id: proId++,
     isDiscount: false,
     isLiked: false,
     inCart: false,
@@ -10,7 +12,7 @@ const products = [
     finalPrice: "1,200",
     marketingPrice: "1,500",
     imageUrl: "https://i.ibb.co/hLyxMNt/pro1.png",
-    ingredient: "ingredient・pepper・ipsum",
+    ingredient: "We strive offer unparalleled mark so you can rest",
     isTimeLimited: true,
     isFavorites: false,
     point: "12,50",
@@ -19,7 +21,7 @@ const products = [
     alsoLike: true,
   },
   {
-    id: "pro2",
+    id: proId++,
     isDiscount: false,
     isLiked: false,
     inCart: false,
@@ -38,7 +40,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro3",
+    id: proId++,
     isDiscount: false,
     isLiked: false,
     inCart: false,
@@ -48,7 +50,7 @@ const products = [
     finalPrice: "2980",
     marketingPrice: "4280",
     imageUrl: "https://i.ibb.co/kDJDNWG/pro3.png",
-    ingredient: "ingredient・pepper・ipsum",
+    ingredient: "We strive offer unparalleled mark so you can rest",
     isTimeLimited: true,
     isFavorites: false,
     point: "12,50",
@@ -57,8 +59,8 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro4",
-    isDiscount: false,
+    id: proId++,
+    isDiscount: true,
     isLiked: false,
     inCart: false,
     isTop: false,
@@ -76,7 +78,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro5",
+    id: proId++,
     isDiscount: false,
     isLiked: false,
     inCart: false,
@@ -95,7 +97,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro6",
+    id: proId++,
     isDiscount: false,
     isLiked: false,
     inCart: false,
@@ -114,8 +116,8 @@ const products = [
     alsoLike: true,
   },
   {
-    id: "pro7",
-    isDiscount: false,
+    id: proId++,
+    isDiscount: true,
     isLiked: false,
     inCart: false,
     isTop: true,
@@ -133,7 +135,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro8",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,
@@ -152,7 +154,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro9",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,
@@ -171,7 +173,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro10",
+    id: proId++,
     isDiscount: false,
     isLiked: false,
     inCart: false,
@@ -190,7 +192,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro11",
+    id: proId++,
     isDiscount: false,
     isLiked: false,
     inCart: false,
@@ -209,7 +211,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro12",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,
@@ -228,7 +230,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro13",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,
@@ -247,7 +249,7 @@ const products = [
     alsoLike: false,
   },
   {
-    id: "pro14",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,
@@ -266,7 +268,7 @@ const products = [
     alsoLike: true,
   },
   {
-    id: "pro15",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,
@@ -285,7 +287,7 @@ const products = [
     alsoLike: true,
   },
   {
-    id: "pro16",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,
@@ -304,7 +306,7 @@ const products = [
     alsoLike: true,
   },
   {
-    id: "pro17",
+    id: proId++,
     isDiscount: true,
     isLiked: false,
     inCart: false,

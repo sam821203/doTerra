@@ -14,6 +14,9 @@ const store = createStore({
     toggleCart(context) {
       context.commit('toggleCart');
     },
+    getIsDiscount(context) {
+      context.commit('getIsDiscount');
+    }
   },
   mutations: {
     toggleLike(state, productId) {
@@ -26,6 +29,11 @@ const store = createStore({
 
       if (product) product.inCart = !product.inCart;
     },
+    getIsDiscount(state, productId) {
+      const product = state.products.find((pro) => pro.id === productId);
+
+      return product.isDiscount;
+    }
   },
   getters: {
     getProducts(state) {

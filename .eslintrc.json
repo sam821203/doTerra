@@ -26,6 +26,7 @@
     "vue/valid-attribute-name": "off",
     "vue/singleline-html-element-content-newline": "off",
     "no-underscore-dangle": "off",
+    "no-plusplus": "off",
     // "vue/singleline-html-element-content-newline": [
     //   "error",
     //   {

@@ -38,39 +38,41 @@
         :key="pro.title"
         class="product"
       >
-        <div class="product__content">
-          <div>
-            <div class="product__title">
-              <h3>{{ pro.title }}</h3><span>({{ pro.capacity[0] }}ml)</span>
+        <div>
+          <div class="product__content">
+            <div>
+              <div class="product__title">
+                <h3>{{ pro.title }}</h3><span>({{ pro.capacity[0] }}ml)</span>
+              </div>
+              <h6>{{ pro.ingredient }}</h6>
             </div>
-            <h6>{{ pro.ingredient }}</h6>
-          </div>
-          <div>
-            <base-point mode="outline">{{ pro.point }}</base-point>
-            <div class="product__price">
-              NT$
-              <base-price mode="discount">{{ pro.finalPrice }}</base-price>
-              <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
+            <div>
+              <base-point mode="outline">{{ pro.point }}</base-point>
+              <div class="product__price">
+                NT$
+                <base-price mode="discount">{{ pro.finalPrice }}</base-price>
+                <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product__icons">
-          <base-icon
-            :product-id="pro.id"
-            :is-liked="pro.isLiked"
-            mode="like secondary-bg"
-          ></base-icon>
-          <base-icon
-            :product-id="pro.id"
-            :in-cart="pro.inCart"
-            mode="cart secondary-bg"
-          ></base-icon>
-        </div>
-        <div class="product__img">
-          <div></div>
-          <base-image>
-            <img :src="pro.imageUrl" alt="">
-          </base-image>
+          <div class="product__icons">
+            <base-icon
+              :product-id="pro.id"
+              :is-liked="pro.isLiked"
+              mode="like secondary-bg"
+            ></base-icon>
+            <base-icon
+              :product-id="pro.id"
+              :in-cart="pro.inCart"
+              mode="cart secondary-bg"
+            ></base-icon>
+          </div>
+          <div class="product__img">
+            <div></div>
+            <base-image>
+              <img :src="pro.imageUrl" alt="">
+            </base-image>
+          </div>
         </div>
       </li>
     </ul>
@@ -118,8 +120,11 @@ h2 {
 h6 {
   padding-top: 8px;
   margin-bottom: 24px;
+  max-width: 164px;
+  height: 40px;
   color: var(--secondary-300);
   border-top: 1px solid var(--gray-400);
+  line-height: 150%;
 }
 
 .section__title {
@@ -139,7 +144,8 @@ h6 {
 }
 
 .section__block > li {
-  width: calc(33% - 13.333px);
+  width: calc(33% - 8px);
+  max-width: 390px;
   background-color: var(--gray-100);
   border-radius: var(--border-radius-md);
 }
@@ -213,10 +219,14 @@ h6 {
 
 .product {
   position: relative;
+}
+
+.product > div {
   display: flex;
   justify-content: space-between;
   align-items: end;
   padding: 24px 32px;
+
 }
 
 .product__price {
@@ -241,6 +251,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .product__title {
@@ -261,12 +272,9 @@ h6 {
 .product__icons {
   position: absolute;
   top: 8%;
-  right: 24px;
+  right: 22px;
   z-index: 1;
   display: flex;
 }
 
-.product__icons button {
-  margin-left: -6px;
-}
 </style>
