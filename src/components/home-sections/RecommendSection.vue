@@ -71,6 +71,13 @@ button {
   background-image: url('../../assets/images/recommend-left.jpg');
 }
 
+.recommend__right {
+  height: 700px;
+  background-position: center;
+  background-size: auto;
+  background-image: url('../../assets/images/recommend-right.jpg');
+}
+
 .buttons > button:first-child {
   position: absolute;
   top: 40%;

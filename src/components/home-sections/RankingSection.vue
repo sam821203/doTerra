@@ -10,7 +10,7 @@
           prevEl: '.swiper-button-prev'
         }"
         :autoplay="{
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
         }"
         :speed="1000"
@@ -47,8 +47,6 @@
             <h3 class="product__title">{{ pro.title }}</h3>
             <h6 class="product__desc">{{ pro.ingredient }}</h6>
             <div class="product__price">
-              <!-- <base-price mode="discount">{{ pro.finalPrice }}</base-price>
-              <base-price mode="line-through">{{ pro.marketingPrice }}</base-price> -->
               <base-price v-if="pro.isDiscount" mode="line-through">{{ pro.marketingPrice }}</base-price>
               <base-price :is-discount="pro.isDiscount"><span class="currency">NT$</span>{{ pro.finalPrice }}</base-price>
             </div>

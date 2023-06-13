@@ -173,7 +173,7 @@ button {
 
 .secondary-white-bg.active {
   background-color: var(--primary-100);
-  fill: var(--primary-400);
-  stroke: var(--primary-400);
+  fill: var(--primary-200);
+  stroke: var(--primary-200);
 }
 </style>

@@ -125,6 +125,8 @@ h2 {
 
 h3 {
   font-size: var(--header-3);
+  line-height: 140%;
+
 }
 
 h6 {

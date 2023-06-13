@@ -211,7 +211,7 @@ select:focus + .product__select--focus {
 }
 
 .product__tag {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   height: 32px;
 }
 

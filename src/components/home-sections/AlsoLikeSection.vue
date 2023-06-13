@@ -2,23 +2,35 @@
   <section class="also-like">
     <div>
       <h2>Product You May Also Like</h2>
-      <h6>View more</h6>
+      <a href="javascript:void(0)">
+        <h6>View more<img src="../../assets/images/angle-right.svg" alt=""></h6>
+      </a>
     </div>
     <ul>
-      <li v-for="pro in handleAlsoLike" :key="pro.title">
-        <div class="icons">
+      <li
+        v-for="pro in handleAlsoLike"
+        :key="pro.title"
+        class="product__block"
+      >
+        <div class="product__icons">
           <base-icon
             :product-id="pro.id"
             :is-liked="pro.isLiked"
-            mode="like secondary-bg"
+            mode="like secondary-white-bg"
+          ></base-icon>
+          <base-icon
+            :product-id="pro.id"
+            :in-cart="pro.inCart"
+            mode="cart secondary-white-bg"
           ></base-icon>
         </div>
-        <base-image :image-url="pro.imageUrl"></base-image>
+        <div class="product__img">
+          <base-image :image-url="pro.imageUrl"></base-image>
+        </div>
         <h3 class="product__title">{{ pro.title }}</h3>
-        <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
-        <div>
-          NT$
-          <base-price mode="discount">{{ pro.finalPrice }}</base-price>
+        <div class="product__price">
+          <base-price v-if="pro.isDiscount" mode="line-through">{{ pro.marketingPrice }}</base-price>
+          <base-price :is-discount="pro.isDiscount"><span class="currency">NT$</span>{{ pro.finalPrice }}</base-price>
         </div>
       </li>
     </ul>
@@ -50,10 +62,22 @@ section {
   margin-bottom: 130px;
 }
 
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+h6 > img {
+  margin-left: 6px;
+}
+
 section > div:first-child {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
 }
 
 ul {
@@ -67,7 +91,14 @@ li {
   width: calc(20% - 16px);
 }
 
-.icons > button {
+.product__icons {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+}
+
+.product__icons > button {
   position: absolute;
   right: 4%;
 }
@@ -82,4 +113,27 @@ li {
   margin-bottom: 10px;
 }
 
+.product__img {
+  padding-top: 30px;
+  margin-bottom: 20px;
+  width: 240px;
+  height: 210px;
+  background-color: var(--gray-200);
+}
+
+.product__price {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+  height: 40px;
+  flex-direction: column;
+}
+
+.product__block {
+  transition: all .3s ease;
+}
+
+.product__block:hover {
+  box-shadow: var(--box-shadow-2);
+}
 </style>

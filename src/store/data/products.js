@@ -113,7 +113,7 @@ const products = [
     inCart: false,
     isTop: false,
     topRanking: null,
-    title: 'Breathe Respiratory Drops',
+    title: 'Breathe Respiratory',
     finalPrice: "1200",
     marketingPrice: "1200",
     imageUrl: "https://i.ibb.co/h94X3MS/pro6.png",
