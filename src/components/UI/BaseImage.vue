@@ -1,7 +1,7 @@
 <template>
   <a href="">
     <div :class="mode">
-      <slot />
+      <img :src="imageUrl" alt="">
     </div>
   </a>
 </template>
@@ -14,6 +14,11 @@ export default {
       required: false,
       default: null,
     },
+    imageUrl: {
+      type: String,
+      required: true,
+      default: '',
+    }
   }
 };
 </script>
@@ -21,5 +26,10 @@ export default {
 <style scoped>
 div {
   text-align: center;
+  overflow: hidden;
+}
+
+img {
+  object-fit: contain;
 }
 </style>

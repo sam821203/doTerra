@@ -13,9 +13,7 @@
             mode="like secondary-bg"
           ></base-icon>
         </div>
-        <base-image>
-          <img :src="pro.imageUrl" alt="">
-        </base-image>
+        <base-image :image-url="pro.imageUrl"></base-image>
         <h3 class="product__title">{{ pro.title }}</h3>
         <base-price mode="line-through">{{ pro.marketingPrice }}</base-price>
         <div>

@@ -14,11 +14,13 @@ const products = [
     imageUrl: "https://i.ibb.co/hLyxMNt/pro1.png",
     ingredient: "We strive offer unparalleled mark so you can rest",
     isTimeLimited: true,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 100],
     alsoLike: true,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -33,11 +35,13 @@ const products = [
     imageUrl: "https://i.ibb.co/jLVBWwj/pro2.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: true,
+    isMonthLimited: false,
     isFavorites: false,
     point: "8,00",
     selectCapacity: '',
     capacity: [10],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -52,11 +56,13 @@ const products = [
     imageUrl: "https://i.ibb.co/kDJDNWG/pro3.png",
     ingredient: "We strive offer unparalleled mark so you can rest",
     isTimeLimited: true,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -68,14 +74,16 @@ const products = [
     title: 'SmartSassy',
     finalPrice: "1,500",
     marketingPrice: "1,800",
-    imageUrl: "https://i.ibb.co/SQVZj0g/pro4.png",
+    imageUrl: "https://i.ibb.co/18TFSVj/pro4.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: true,
     point: "12,50",
     selectCapacity: '',
     capacity: [450, 100, 200],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -90,11 +98,13 @@ const products = [
     imageUrl: "https://i.ibb.co/9b757SV/pro5.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: true,
     point: "8,00",
     selectCapacity: '',
     capacity: [10],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -109,11 +119,13 @@ const products = [
     imageUrl: "https://i.ibb.co/h94X3MS/pro6.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: true,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 200],
     alsoLike: true,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -125,14 +137,16 @@ const products = [
     title: 'Petal difusser',
     finalPrice: "7900",
     marketingPrice: "8550",
-    imageUrl: "https://i.ibb.co/98K6jN7/pro7.png",
+    imageUrl: "https://i.ibb.co/bPsjWYj/pro7.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: true,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -147,11 +161,13 @@ const products = [
     imageUrl: "https://i.ibb.co/pfL9ry6/pro8.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -166,11 +182,13 @@ const products = [
     imageUrl: "https://i.ibb.co/mv24DXz/pro9.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: true,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: false,
+    productState: "POM"
   },
   {
     id: proId++,
@@ -185,11 +203,13 @@ const products = [
     imageUrl: "https://i.ibb.co/ngTbc3V/pro10.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: true,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -204,11 +224,13 @@ const products = [
     imageUrl: "https://i.ibb.co/bFgQW00/pro11.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -223,11 +245,13 @@ const products = [
     imageUrl: "https://i.ibb.co/t3Bfn3W/pro12.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -242,11 +266,13 @@ const products = [
     imageUrl: "https://i.ibb.co/mBhFJHv/pro13.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: false,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -261,11 +287,13 @@ const products = [
     imageUrl: "https://i.ibb.co/WszQ08c/pro14.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: true,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -280,11 +308,13 @@ const products = [
     imageUrl: "https://i.ibb.co/SVC3JyB/pro15.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: true,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -299,11 +329,13 @@ const products = [
     imageUrl: "https://i.ibb.co/BzYn3Zb/pro16.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: false,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [20, 150],
     alsoLike: true,
+    productState: "discount"
   },
   {
     id: proId++,
@@ -313,16 +345,18 @@ const products = [
     isTop: false,
     topRanking: null,
     title: 'Guard Toothpaste',
-    finalPrice: "660",
+    finalPrice: "600",
     marketingPrice: "800",
     imageUrl: "https://i.ibb.co/ZJsHP74/pro17.png",
     ingredient: "ingredient・pepper・ipsum",
     isTimeLimited: false,
+    isMonthLimited: true,
     isFavorites: false,
     point: "12,50",
     selectCapacity: '',
     capacity: [50],
     alsoLike: false,
+    productState: "discount"
   },
 ];
 

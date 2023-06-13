@@ -1,8 +1,6 @@
 <template>
-  <span class="price" :class="[mode, 'price-lg', { discount: isDiscount }]">
-    <span class="price__inner">
-      <slot />
-    </span>
+  <span class="price" :class="[mode, { discount: isDiscount }]">
+    <slot />
   </span>
 </template>
 
@@ -25,21 +23,13 @@ export default {
 
 <style scoped>
 .price {
-  font-size: 14px;
+  font-size: 20px;
+  color: var(--secondary-400);
   letter-spacing: 0.6px;
-}
-
-.price__inner {
-  margin-right: 8px;
+  font-weight: 600;
 }
 
 .origin {
-  font-size: 20px;
-  color: var(--secondary-400);
-  font-weight: 700;
-}
-
-.price-lg {
   font-size: 20px;
   color: var(--secondary-400);
   font-weight: 700;
@@ -50,6 +40,7 @@ export default {
 }
 
 .line-through {
+  margin-bottom: 4px;
   font-size: 12px;
   color: var(--secondary-200);
   text-decoration-line: line-through;

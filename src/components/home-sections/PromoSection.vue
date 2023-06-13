@@ -40,19 +40,15 @@
       </div>
       <div>
         <ul>
-          <li class="product">
-            <div class="product__tag pom">POM</div>
-            <base-image>
-              <img src="https://i.ibb.co/ZJsHP74/pro17.png" alt="">
-            </base-image>
-            <h3>Guard Toothpaste</h3>
-          </li>
-          <li class="product">
-            <div class="product__tag discount">10<span>%</span></div>
-            <base-image>
-              <img src="https://i.ibb.co/mv24DXz/pro9.png" alt="">
-            </base-image>
-            <h3>Deepblue</h3>
+          <li
+            v-for="pro in monthLimitedProduct"
+            :key="pro.id"
+            class="product"
+          >
+            <div v-if="pro.productState === 'POM'" class="product__tag pom">POM</div>
+            <div v-else-if="pro.productState === 'discount'" class="product__tag discount">{{ calcDiscount(pro.finalPrice, pro.marketingPrice) }}<span>%</span></div>
+            <base-image :image-url="pro.imageUrl"></base-image>
+            <h3>{{ pro.title }}</h3>
           </li>
         </ul>
       </div>
@@ -61,20 +57,27 @@
 </template>
 
 <script>
-// import { useStore } from 'vuex';
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 
 export default {
   setup() {
-    // const store = useStore();
+    const store = useStore();
+    const products = store.getters.getProducts;
 
-    // console.log(store);
+    const monthLimitedProduct = computed(() => products.filter((pro) => pro.isMonthLimited === true));
+
+    const calcDiscount = (finalPrice, marketingPrice) => 100 - (100 * (Number(finalPrice.replace(',', '')) / Number(marketingPrice.replace(',', ''))));
+
     return {
+      monthLimitedProduct,
+      calcDiscount
     };
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 section {
   display: flex;
   justify-content: space-between;

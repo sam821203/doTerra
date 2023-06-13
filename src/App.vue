@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style>
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap';
 
 :root {
   /* 品牌主色 */

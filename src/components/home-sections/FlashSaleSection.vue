@@ -69,9 +69,7 @@
           </div>
           <div class="product__img">
             <div></div>
-            <base-image>
-              <img :src="pro.imageUrl" alt="">
-            </base-image>
+            <base-image :image-url="pro.imageUrl"></base-image>
           </div>
         </div>
       </li>
@@ -91,7 +89,6 @@ export default {
     const isTimeLimitedProduct = computed(() => products.filter((pro) => pro.isTimeLimited === true));
 
     return {
-      products,
       isTimeLimitedProduct
     };
   }
@@ -232,6 +229,10 @@ h6 {
 .product__price {
   margin-top: 12px;
   color: var(--red-500);
+}
+
+.price.discount {
+  margin-right: 8px;
 }
 
 .product__img {

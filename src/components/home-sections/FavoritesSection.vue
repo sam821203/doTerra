@@ -8,26 +8,32 @@
       <base-card mode="shadow-rounded">
         <ul>
           <li v-for="pro in displayFavorites" :key="pro.title">
-            <img src="../../assets/images/promo-tag.png" alt="">
-            <base-image>
-              <img :src="pro.imageUrl" alt="">
-            </base-image>
+            <div class="product__tag">
+              <img
+                v-if="pro.isDiscount"
+                src="../../assets/images/promo-tag.png"
+                alt=""
+              >
+            </div>
+            <base-image :image-url="pro.imageUrl"></base-image>
             <h3>{{ pro.title }}</h3>
-            <p>{{ pro.ingredient }}</p>
+            <h6>{{ pro.ingredient }}</h6>
             <div class="product__price">
-              <select v-model="pro.selectCapacity">
-                <option
-                  value=""
-                  disabled
-                  selected
-                >
-                  Capacity
-                </option>
-                <option v-for="(option, index) in pro.capacity" :key="index">{{ option }}</option>
-              </select>
+              <div class="product__select">
+                <select v-model="pro.selectCapacity">
+                  <option
+                    value=""
+                    disabled
+                    selectedl
+                  >
+                    CY (ml)
+                  </option>
+                  <option v-for="(option, index) in pro.capacity" :key="index">{{ option }} ml</option>
+                </select>
+              </div>
               <div>
                 <base-price v-if="pro.isDiscount" mode="line-through">{{ pro.marketingPrice }}</base-price>
-                <base-price :is-discount="pro.isDiscount">{{ pro.finalPrice }}</base-price>
+                <base-price :is-discount="pro.isDiscount"><span class="currency">NT$</span>{{ pro.finalPrice }}</base-price>
               </div>
             </div>
             <div class="product__buttons">
@@ -74,10 +80,19 @@ section {
   margin-bottom: 104px;
 }
 
+h3 {
+  margin-bottom: 8px;
+}
+
+h6 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
 ul {
   display: flex;
   justify-content: space-evenly;
-  padding: 48px 0 26px;
+  padding: 36px 0 26px;
   width: 100%;
 }
 
@@ -91,6 +106,52 @@ li {
 h3,
 p {
   text-align: center;
+}
+
+select {
+  padding: 8px 16px 8px 6px;
+  margin: 0;
+  height: 30px;
+  color: var(--secondary-300);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+.product__select {
+  display: grid;
+  align-items: center;
+  min-width: 72px;
+  max-height: 30px;
+  font-size: 12px;
+  background-color: var(--gray-200);
+  border: 1px solid var(--gray-400);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  grid-template-areas: "select";
+}
+
+.product__select::after {
+  margin-top: 2px;
+  margin-right: 5px;
+  width: 8px;
+  height: 6px;
+  background-color: var(--secondary-300);
+  content: "";
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+select,
+.product__select::after {
+  grid-area: select;
+}
+
+.product__select + div {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 .title {
@@ -135,5 +196,24 @@ p {
 .product__price {
   display: flex;
   justify-content: space-between;
+  align-items: end;
+  margin-bottom: 16px;
+  height: 54px;
+}
+
+.product__tag {
+  margin-bottom: 20px;
+  height: 32px;
+}
+
+.product__tag + a {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.currency {
+  margin-right: 4px;
+  font-size: 14px;
+  font-weight: 400;
 }
 </style>
