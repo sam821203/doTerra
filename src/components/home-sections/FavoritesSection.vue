@@ -24,12 +24,13 @@
                   <option
                     value=""
                     disabled
-                    selectedl
+                    selected
                   >
                     CY (ml)
                   </option>
                   <option v-for="(option, index) in pro.capacity" :key="index">{{ option }} ml</option>
                 </select>
+                <span class="product__select--focus"></span>
               </div>
               <div>
                 <base-price v-if="pro.isDiscount" mode="line-through">{{ pro.marketingPrice }}</base-price>
@@ -76,7 +77,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20%;
+  padding-bottom: 352px;
   margin-bottom: 104px;
 }
 
@@ -120,6 +121,7 @@ select {
 }
 
 .product__select {
+  position: relative;
   display: grid;
   align-items: center;
   min-width: 72px;
@@ -146,6 +148,13 @@ select {
 select,
 .product__select::after {
   grid-area: select;
+}
+
+select:focus + .product__select--focus {
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid var(--primary-200);
+  border-radius: inherit;
 }
 
 .product__select + div {
@@ -209,11 +218,5 @@ select,
 .product__tag + a {
   display: block;
   margin-bottom: 16px;
-}
-
-.currency {
-  margin-right: 4px;
-  font-size: 14px;
-  font-weight: 400;
 }
 </style>

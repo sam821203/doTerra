@@ -57,6 +57,7 @@ export default {
 
   /* box-shadow */
   --box-shadow-1: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  --box-shadow-2: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
 
   /* border-radius */
   --border-radius-md: 6px;
@@ -259,5 +260,11 @@ button {
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
+}
+
+.currency {
+  margin-right: 4px;
+  font-size: 14px;
+  font-weight: 400;
 }
 </style>

@@ -115,6 +115,7 @@ button {
   border: none;
   cursor: pointer;
   fill: transparent;
+  transition: all .2s ease;
 }
 
 .primary-bg {
@@ -129,7 +130,8 @@ button {
   stroke: var(--primary-400);
 }
 
-.primary-outline:hover {
+.primary-outline:hover,
+.secondary-white-bg:hover {
   background-color: var(--primary-100);
 }
 
@@ -159,5 +161,19 @@ button {
 
 .secondary-bg {
   stroke: var(--secondary-100);
+}
+
+.secondary-white-bg {
+  padding: 18px;
+  margin-bottom: 6px;
+  background-color: white;
+  border-radius: 50%;
+  stroke: var(--secondary-100);
+}
+
+.secondary-white-bg.active {
+  background-color: var(--primary-100);
+  fill: var(--primary-400);
+  stroke: var(--primary-400);
 }
 </style>
