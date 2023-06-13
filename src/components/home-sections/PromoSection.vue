@@ -35,8 +35,8 @@
       <div>
         <div class="semicircle"></div>
         <!-- 這裡會跟著月份改動 -->
-        <h3 class="month-num">12</h3>
-        <div class="month">December</div>
+        <h3 class="month-num">7</h3>
+        <div class="month">July</div>
       </div>
       <div>
         <ul>
@@ -178,6 +178,10 @@ li {
   color: var(--red-500);
 }
 
+.product__price > span:last-child {
+  margin-left: 8px;
+}
+
 .section__right {
   position: relative;
   width: calc(36% - 10px);
@@ -188,6 +192,7 @@ li {
 
 .section__right h3 {
   margin-bottom: 12px;
+  line-height: 120%;
 }
 
 .section__right > div:last-child {

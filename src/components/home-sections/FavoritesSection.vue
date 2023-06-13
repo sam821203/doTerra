@@ -6,6 +6,9 @@
         <img src="../../assets/images/favorites-title.png" alt="">
       </div>
       <base-card mode="shadow-rounded">
+        <a class="view-more" href="javascript:void(0)">
+          <h6>View more<img src="../../assets/images/angle-right.svg" alt=""></h6>
+        </a>
         <ul>
           <li v-for="pro in displayFavorites" :key="pro.title">
             <div class="product__tag">
@@ -87,13 +90,16 @@ h3 {
 
 h6 {
   margin-bottom: 24px;
-  text-align: center;
+}
+
+h6 > img {
+  margin-left: 6px;
 }
 
 ul {
   display: flex;
   justify-content: space-evenly;
-  padding: 36px 0 26px;
+  padding: 34px 0 26px;
   width: 100%;
 }
 
@@ -218,5 +224,11 @@ select:focus + .product__select--focus {
 .product__tag + a {
   display: block;
   margin-bottom: 16px;
+}
+
+.view-more {
+  position: absolute;
+  top: 8%;
+  right: 4%;
 }
 </style>

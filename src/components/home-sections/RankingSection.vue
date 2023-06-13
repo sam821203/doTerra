@@ -100,7 +100,7 @@ export default {
 <style scoped>
 section {
   position: relative;
-  margin-bottom: 124px;
+  margin-bottom: 112px;
 }
 
 h2 {

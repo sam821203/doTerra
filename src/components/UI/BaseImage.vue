@@ -1,5 +1,5 @@
 <template>
-  <a href="">
+  <a href="javascript:void(0)">
     <div :class="mode">
       <img :src="imageUrl" alt="">
     </div>
