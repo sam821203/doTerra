@@ -269,4 +269,19 @@ button {
   font-size: 14px;
   font-weight: 400;
 }
+
+.swiper-pagination {
+  top: 94% !important;
+}
+
+.dot.swiper-pagination-bullet {
+  background-color: var(--secondary-400);
+  border: 1px solid var(--gray-100);
+  opacity: 0.35;
+}
+
+.dot.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--gray-100);
+  opacity: 1;
+}
 </style>

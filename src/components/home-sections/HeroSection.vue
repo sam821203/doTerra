@@ -9,10 +9,14 @@
       }"
       :pagination="{
         clickable: true,
+        renderBullet: customRenderBullet
+      }"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
       }"
       :speed="1500"
       :modules="modules"
-      :initial-slide="1"
       :breakpoints="{
         1920: {
           slidesPerView: 1.6,
@@ -27,39 +31,39 @@
           spaceBetween: 0,
         },
         1280: {
-          slidesPerView: 1.15,
-          spaceBetween: 40,
+          slidesPerView: 1.08,
+          spaceBetween: 80,
         }
       }"
       class="mySwiper"
     >
       <swiper-slide>
-        <a href="">
+        <a href="javascript:void(0)">
           <img src="../../assets/images/slider-1.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
-        <a href="">
+        <a href="javascript:void(0)">
           <img src="../../assets/images/slider-2.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
-        <a href="">
+        <a href="javascript:void(0)">
           <img src="../../assets/images/slider-3.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
-        <a href="">
-          <img src="../../assets/images/slider-3.jpg" alt="">
+        <a href="javascript:void(0)">
+          <img src="../../assets/images/slider-4.jpg" alt="">
         </a>
       </swiper-slide>
       <swiper-slide>
-        <a href="">
-          <img src="../../assets/images/slider-3.jpg" alt="">
+        <a href="javascript:void(0)">
+          <img src="../../assets/images/slider-5.jpg" alt="">
         </a>
       </swiper-slide>
-      <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </swiper>
   </section>
 </template>
@@ -78,7 +82,10 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const customRenderBullet = () => `<span class="dot swiper-pagination-bullet"></span>`;
+
     return {
+      customRenderBullet,
       modules: [Autoplay, Pagination, Navigation],
     };
   }
@@ -103,12 +110,16 @@ section {
   opacity: 1;
 }
 
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
-  top: 55%;
+  top: 55.5%;
   justify-content: center;
   width: 60px;
-  height: 101%;
+  height: 102%;
   color: var(--gray-400);
   background-color: var(--gray-300);
   transform: translateY(-50%);
@@ -120,18 +131,58 @@ section {
 }
 
 .swiper-button-prev {
-  left: 16.4%;
+  left: -0.9%;
   box-shadow: -5px 0 24px 0 rgba(0, 0, 0, 0.08);
 }
 
 .swiper-button-next {
-  right: 16.4%;
+  right: -0.9%;
   box-shadow: 5px 0 24px 0 rgba(0, 0, 0, 0.08);
 }
 
-@media screen and (width <= 1700px) {
+@media screen and (width >= 1280px){
+  .swiper-button-prev,
   .swiper-button-next {
-    right: 14.4%;
+    top: 55%;
+    height: 101%;
+  }
+
+  .swiper-button-prev{
+    left: 2.6%;
+  }
+
+  .swiper-button-next{
+    right: 2.6%;
+  }
+}
+
+@media screen and (width >= 1400px){
+  .swiper-button-prev{
+    left: 6.2%;
+  }
+
+  .swiper-button-next{
+    right: 6.2%;
+  }
+}
+
+@media screen and (width >= 1600px){
+  .swiper-button-prev{
+    left: 13%;
+  }
+
+  .swiper-button-next{
+    right: 13%;
+  }
+}
+
+@media screen and (width >= 1800px){
+  .swiper-button-prev{
+    left: 16.45%;
+  }
+
+  .swiper-button-next{
+    right: 16.45%;
   }
 }
 </style>
