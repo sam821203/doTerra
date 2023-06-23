@@ -28,23 +28,24 @@
       </ul>
       <div class="header__right">
         <div>
-          <a href="">
+          <a href="javascript:void(0)">
             <img src="../../assets/images/help.svg" alt="">
           </a>
         </div>
         <div>
-          <a href="">
+          <a href="javascript:void(0)">
             <img src="../../assets/images/account.svg" alt="">
           </a>
         </div>
         <div>
-          <a href="">
+          <a href="javascript:void(0)">
             <img src="../../assets/images/like.svg" alt="">
           </a>
         </div>
-        <div>
-          <a href="">
+        <div class="cart__wrap">
+          <a href="javascript:void(0)">
             <img src="../../assets/images/cart.svg" alt="">
+            <div class="quantity">0</div>
           </a>
         </div>
       </div>
@@ -137,5 +138,23 @@
     display: flex;
     justify-content: end;
     width: 19%;
+  }
+
+  .cart__wrap {
+    position: relative;
+  }
+
+  .quantity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17px;
+    height: 17px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--gray-100);
+    background-color: var(--red-500);
+    border-radius: var(--border-radius-circle);
+    line-height: 17px;
   }
 </style>
