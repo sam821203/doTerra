@@ -5,7 +5,11 @@
       <div class="info">
         <div>
           <h2 class="mb-sm">Scents of the Season</h2>
-          <p class="mb-md">For life's fast-paced moments, from a busy work day to festive activities, try using Wild Orange during periods of low energy for a quick boost.</p>
+          <p class="mb-md">
+            For life's fast-paced moments, from a busy work day to festive
+            activities, try using Wild Orange during periods of low energy for a
+            quick boost.
+          </p>
           <base-button mode="btn-round">Add to Cart</base-button>
         </div>
       </div>
@@ -26,8 +30,8 @@
           </div>
         </div>
         <div class="product__imgs">
-          <img src="../../assets/images/promo-decor.png" alt="">
-          <img src="../../assets/images/promo-product.png" alt="">
+          <img src="../../assets/images/promo-decor.png" alt="" />
+          <img src="../../assets/images/promo-product.png" alt="" />
         </div>
       </div>
     </base-card>
@@ -45,8 +49,16 @@
             :key="pro.id"
             class="product"
           >
-            <div v-if="pro.productState === 'POM'" class="product__tag pom">POM</div>
-            <div v-else-if="pro.productState === 'discount'" class="product__tag discount">{{ calcDiscount(pro.finalPrice, pro.marketingPrice) }}<span>%</span></div>
+            <div v-if="pro.productState === 'POM'" class="product__tag pom">
+              POM
+            </div>
+            <div
+              v-else-if="pro.productState === 'discount'"
+              class="product__tag discount"
+            >
+              {{ calcDiscount(pro.finalPrice, pro.marketingPrice)
+              }}<span>%</span>
+            </div>
             <base-image :image-url="pro.imageUrl"></base-image>
             <h3>{{ pro.title }}</h3>
           </li>
@@ -57,23 +69,29 @@
 </template>
 
 <script>
-import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { computed } from "vue";
+import { useStore } from "vuex";
 
 export default {
   setup() {
     const store = useStore();
     const products = store.getters.getProducts;
 
-    const monthLimitedProduct = computed(() => products.filter((pro) => pro.isMonthLimited === true));
+    const monthLimitedProduct = computed(() =>
+      products.filter((pro) => pro.isMonthLimited === true)
+    );
 
-    const calcDiscount = (finalPrice, marketingPrice) => 100 - (100 * (Number(finalPrice.replace(',', '')) / Number(marketingPrice.replace(',', ''))));
+    const calcDiscount = (finalPrice, marketingPrice) =>
+      100 -
+      100 *
+        (Number(finalPrice.replace(",", "")) /
+          Number(marketingPrice.replace(",", "")));
 
     return {
       monthLimitedProduct,
-      calcDiscount
+      calcDiscount,
     };
-  }
+  },
 };
 </script>
 

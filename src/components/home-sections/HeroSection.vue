@@ -3,13 +3,13 @@
     <swiper
       :centered-slides="true"
       :loop="true"
-      :navigation=" {
+      :navigation="{
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        prevEl: '.swiper-button-prev',
       }"
       :pagination="{
         clickable: true,
-        renderBullet: customRenderBullet
+        renderBullet: customRenderBullet,
       }"
       :autoplay="{
         delay: 2500,
@@ -33,33 +33,33 @@
         1280: {
           slidesPerView: 1.08,
           spaceBetween: 80,
-        }
+        },
       }"
       class="mySwiper"
     >
       <swiper-slide>
         <a href="javascript:void(0)">
-          <img src="../../assets/images/slider-1.jpg" alt="">
+          <img src="../../assets/images/slider-1.jpg" alt="" />
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="javascript:void(0)">
-          <img src="../../assets/images/slider-2.jpg" alt="">
+          <img src="../../assets/images/slider-2.jpg" alt="" />
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="javascript:void(0)">
-          <img src="../../assets/images/slider-3.jpg" alt="">
+          <img src="../../assets/images/slider-3.jpg" alt="" />
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="javascript:void(0)">
-          <img src="../../assets/images/slider-4.jpg" alt="">
+          <img src="../../assets/images/slider-4.jpg" alt="" />
         </a>
       </swiper-slide>
       <swiper-slide>
         <a href="javascript:void(0)">
-          <img src="../../assets/images/slider-5.jpg" alt="">
+          <img src="../../assets/images/slider-5.jpg" alt="" />
         </a>
       </swiper-slide>
       <div class="swiper-button-prev"></div>
@@ -69,12 +69,12 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default {
   components: {
@@ -82,13 +82,14 @@ export default {
     SwiperSlide,
   },
   setup() {
-    const customRenderBullet = () => `<span class="dot swiper-pagination-bullet"></span>`;
+    const customRenderBullet = () =>
+      `<span class="dot swiper-pagination-bullet"></span>`;
 
     return {
       customRenderBullet,
       modules: [Autoplay, Pagination, Navigation],
     };
-  }
+  },
 };
 </script>
 
@@ -103,7 +104,7 @@ section {
 
 .swiper-slide {
   opacity: 0.25;
-  transition: all .8s ease;
+  transition: all 0.8s ease;
 }
 
 .swiper-slide.swiper-slide-active {
@@ -140,48 +141,48 @@ section {
   box-shadow: 5px 0 24px 0 rgba(0, 0, 0, 0.08);
 }
 
-@media screen and (width >= 1280px){
+@media screen and (width >= 1280px) {
   .swiper-button-prev,
   .swiper-button-next {
     top: 55%;
     height: 101%;
   }
 
-  .swiper-button-prev{
+  .swiper-button-prev {
     left: 2.6%;
   }
 
-  .swiper-button-next{
+  .swiper-button-next {
     right: 2.6%;
   }
 }
 
-@media screen and (width >= 1400px){
-  .swiper-button-prev{
+@media screen and (width >= 1400px) {
+  .swiper-button-prev {
     left: 6.2%;
   }
 
-  .swiper-button-next{
+  .swiper-button-next {
     right: 6.2%;
   }
 }
 
-@media screen and (width >= 1600px){
-  .swiper-button-prev{
+@media screen and (width >= 1600px) {
+  .swiper-button-prev {
     left: 13%;
   }
 
-  .swiper-button-next{
+  .swiper-button-next {
     right: 13%;
   }
 }
 
-@media screen and (width >= 1800px){
-  .swiper-button-prev{
+@media screen and (width >= 1800px) {
+  .swiper-button-prev {
     left: 16.45%;
   }
 
-  .swiper-button-next{
+  .swiper-button-next {
     right: 16.45%;
   }
 }

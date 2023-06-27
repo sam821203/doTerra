@@ -3,7 +3,9 @@
     <div>
       <h2>Product You May Also Like</h2>
       <a href="javascript:void(0)">
-        <h6>View more<img src="../../assets/images/angle-right.svg" alt=""></h6>
+        <h6>
+          View more<img src="../../assets/images/angle-right.svg" alt="" />
+        </h6>
       </a>
     </div>
     <ul>
@@ -29,8 +31,12 @@
         </div>
         <h3 class="product__title">{{ pro.title }}</h3>
         <div class="product__price">
-          <base-price v-if="pro.isDiscount" mode="line-through">{{ pro.marketingPrice }}</base-price>
-          <base-price :is-discount="pro.isDiscount"><span class="currency">NT$</span>{{ pro.finalPrice }}</base-price>
+          <base-price v-if="pro.isDiscount" mode="line-through">
+            {{ pro.marketingPrice }}
+          </base-price>
+          <base-price :is-discount="pro.isDiscount">
+            <span class="currency">NT$</span>{{ pro.finalPrice }}
+          </base-price>
         </div>
       </li>
     </ul>
@@ -38,22 +44,24 @@
 </template>
 
 <script>
-import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { computed } from "vue";
+import { useStore } from "vuex";
 
 export default {
   setup() {
     const store = useStore();
     const products = store.getters.getProducts;
 
-    const isAlsoLikeProduct = computed(() => products.filter((pro) => pro.alsoLike === true));
+    const isAlsoLikeProduct = computed(() =>
+      products.filter((pro) => pro.alsoLike === true)
+    );
 
     const handleAlsoLike = computed(() => isAlsoLikeProduct.value.slice(0, 5));
 
     return {
-      handleAlsoLike
+      handleAlsoLike,
     };
-  }
+  },
 };
 </script>
 
@@ -130,7 +138,7 @@ li {
 }
 
 .product__block {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .product__block:hover {
